@@ -1,0 +1,56 @@
+<div class="fluid-container clearfix">
+	<!-- mobil -->
+	<div id="noticia_indi_mobil">
+      <div class='container' style=' margin-top: 90px;'>
+        <div class=''>
+          <div class='col-sm-12 col-md-12 col-lg-12 post-image-mobil' style="height:350px; background-image:url({{noticia_una.ImageUrl}});">
+          </div>
+          <div class='col-sm-12 col-md-12 col-lg-12 div_title_not_mobil' style="display: block; height:150px;background-color:#efedee; margin-top:10px;padding:10px; padding-left:7%;padding-right:4%;padding-bottom:0px; width: 100% !important">
+            <div class=''>
+              <p class='col-sm-12 col-md-12 col-lg-12'>
+                <span class="post-title">{{noticia_una.Title}}</span><br>
+                <span class="post-time" style="font-size: 16px">{{noticia_una.CreatedAt | date}}</span>
+              </p>
+              <p class="share_section">
+                 <div style="float:right;margin-right: 20px" class="addthis_sharing_toolbox"></div><span style="float:right;margin-right:30px">Compartir</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-sm-12 col-md-12 col-lg-12 noticia_div_para'>
+            <p class="post-content" ng-bind-html="noticia_una.Content"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- desktop -->
+	<div id="noticia_indi">
+	    <div class='container'>
+
+		    <div class='row'>
+		      	<div class='col-sm-5 col-md-5 col-lg-5 recibe-cubo post-image imgCaching' style="height:350px; background-image:url({{noticia_una.ImageUrl}});">
+		      		
+		      	</div>
+		      	<div class='col-sm-7 col-md-7 col-lg-7 recibe-cubo' style="height:350px;background-color:#efedee; padding:20px">
+		      	  	<div class=''>
+		      	  	  	<p class='col-sm-12 col-md-12 col-lg-12'>
+		      	  	  	  	<span class="post-title">{{noticia_una.Title}}</span><br>
+		      	  	  	  	<span class="post-time" style="font-size: 16px">{{noticia_una.CreatedAt | date}}</span>
+		      	  	  	</p>
+		      	  	  	<p class="share_section">
+		      	  	  	   	<div style="float:right;margin-right: 20px" class="addthis_sharing_toolbox"></div><span style="float:right;margin-right:30px">Compartir</span>
+		      	  	  	</p>
+		      	  	</div>
+		      	</div>
+		    </div>
+		    <div class='row'>
+		      	<div class='col-sm-12 col-md-12 col-lg-12 noticia_div_para'>
+		      	  	<p class="post-content" ng-bind-html="noticia_una.Content"></p>
+		      	</div>
+		    </div>
+
+	    </div>
+	</div>
+</div>

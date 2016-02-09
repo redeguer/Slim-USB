@@ -1,0 +1,116 @@
+
+		<section id="cardio-calculator" class="container">
+				<div class="row container-fluid">
+					<div class="col-md-12">
+						<div class="calculator-title"> Calculadora de Riesgo Cardiovascular</div>
+					</div>
+					<div class="col-md-5">
+						<div class="calc-controls-container" id="control-cardio">
+							<div class="calc-control-item">
+								<label class="calc-item-name alignCheckAttr">* ¿Es usted diabético?</label>
+
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="diabetes_si" class="radio-button radio-button-diabetes lookLkCheckbx" checked name="diabetes" ng-model="diabetes" value="1" ng-change="change_table()"/>
+									<label class="label-radio-button" for="diabetes_si">Sí</label>
+								</div>
+
+								<div class="wrapper-radio-button">
+									<input type="radio" id="diabetes_no" class="radio-button radio-button-diabetes lookLkCheckbx" name="diabetes" ng-model="diabetes" value="2" value="1" ng-change="change_table()" />
+									<label class="label-radio-button" for="diabetes_no">No</label>
+								</div>
+
+
+							</div>
+							<div class="calc-control-item">
+								<label class="calc-item-name alignCheckAttr">* ¿Fuma o ha fumado cigarrillos el último año?</label>
+								
+
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="fumador_si" class="radio-button radio-button-fumador lookLkCheckbx" checked name="smoker" ng-model="smoker" value="1" value="1" ng-change="check_radios()" />
+									<label class="label-radio-button" for="fumador_si">Sí</label>
+								</div>
+
+								<div class="wrapper-radio-button ">
+									<input type="radio" id="fumador_no" class="radio-button radio-button-fumador lookLkCheckbx" name="smoker" ng-model="smoker" value="2" value="1" ng-change="check_radios()" />
+									<label class="label-radio-button" for="fumador_no">No</label>
+								</div>
+
+							</div>
+							<div class="calc-control-item">
+								<label class="calc-item-name alignCheckAttr">* Sexo</label>
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="male" class="radio-button radio-button-cardio lookLkCheckbx" checked name="gender" ng-model="gender"  value="1" ng-change="check_radios()" />
+									<label class="label-radio-button" for="male">Masculino</label>
+								</div>
+
+								<div class="wrapper-radio-button">
+									<input type="radio" id="female" class="radio-button radio-button-cardio lookLkCheckbx" name="gender" ng-model="gender" value="2" ng-change="check_radios()" />
+									<label class="label-radio-button" for="female">Femenino</label>
+								</div>
+							</div>
+
+              <!-- EDAD -->
+              <div class="calc-control-item">
+                <p>Edad<input type="number" inputs-slider id="caloric-input-age" id-nameslider="slider-ages" ng-model="age"  ng-change="check_radios()" min="40" max="99" value="40" /> (años)</p>
+                <div sliders-range class="sliders-ranges slider-black" id-input="caloric-input-age" ng-mouseup="check_radios()" id="slider-ages" my-scope="age" min-range=40 max-range=99 step-range=1 value-range=40></div>
+                <div class="calc-drag-limits">
+                  <span class="calc-limit-left">40 años</span>
+                  <span class="calc-limit-right">99 años</span>
+                </div>
+                <p class="error-input" id="error_age"></p>
+              </div>
+
+              <!-- PRESION ARTERIAL -->
+							<div class="calc-control-item">
+								<p>Presión Arterial Sistólica
+									<span class="calc-info-field" id="sis-pop-over">(?)</span>
+                  <input type="number" inputs-slider id="caloric-input-pressure" id-nameslider="slider-pressure" ng-model="pressure"  ng-change="final_quadrant()" min="110" max="190" value="110" />
+									(mmHg)
+								</p>
+                <div sliders-range class="sliders-ranges slider-red" id-input="caloric-input-pressure" ng-mouseup="final_quadrant()" id="slider-pressure" my-scope="pressure" min-range=110 max-range=190 step-range=1 value-range=110></div>
+                                <div id="pop-sistolica" class="info-popup">
+                                	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+
+                                <div class="calc-drag-limits">
+                                    <span class="calc-limit-left">110 mmHg</span>
+                                    <span class="calc-limit-right">190 mmHg</span>
+                                </div>
+                <p class="error-input" id="error_pressure"></p>
+							</div>
+
+              <!-- COLESTEROL -->
+							<div class="calc-control-item">
+								<p>
+									Colesterol <span class="calc-info-field" id="cho-pop-over">(?) </span>
+                  <input type="number" inputs-slider id="caloric-input-cholesterol" id-nameslider="slider-cholesterol" ng-model="cholesterol"  ng-change="final_quadrant()" min="3" max="9" value="3" />
+									(mmol/l)
+								</p>
+                <div sliders-range class="sliders-ranges slider-orange" id-input="caloric-input-cholesterol" ng-mouseup="final_quadrant()" id="slider-cholesterol" my-scope="cholesterol" min-range=3 max-range=9 step-range=1 value-range=3></div>
+								<div id="pop-cholesterol" class="info-popup">
+                                	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+
+                                <div class="calc-drag-limits">
+                                    <span class="calc-limit-left">3 mmol/l</span>
+                                    <span class="calc-limit-right">9 mmol/l</span>
+                                </div>
+                <p class="error-input" id="error_cholesterol"></p>
+							</div>
+						</div>
+						<button id="btn-reset-cardio" class="calc-btn-reset" ng-click="resetForm()">REINICIAR</button>
+						<label>Campos Obligatorios *</label>
+					</div>
+					<div class="col-md-6 col-md-offset-1 centered-text {{class_color}}">
+                        <h1 id="cardio-risk-percent" class="calc-percent change-color"> {{cardio_percent_html}} </h1>
+						<div class="calc-gline-percent"></div>
+						<div class="calc-oline-percent"></div>
+						<div class="calc-subtitle"></div>
+						<div class="calc-subtitle">Nivel de Riesgo en 10 años</div>
+                        <p class="centered-text">Este es el riesgo que tiene usted de tener un evento cardiovascular mayor, un infarto al miocardio, o un evento vascular en los próximos años.</p>
+                        <div id="cardio-tables" class="calc-tables" cardio-tables  data-value="{{params}}">
+
+                        </div>
+					</div>
+				</div>
+		</section>

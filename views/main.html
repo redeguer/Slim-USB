@@ -1,0 +1,197 @@
+<!-- BUSCADOR -->
+<section id="buscador" class="container">
+	<div class="row container-fluid">				
+		<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px">
+			<h3>¿Qué estás buscando?</h3>
+		</div>
+		<div id="barra-buscador" class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+			<form action="consulta.php" method="GET" id="form-id">
+				<div class="input-group">
+					<input type="text" name="word" id="busca" class="form-control" placeholder="Ejemplos: Diabetes, Hipertensión, Obesidad, etc." aria-describedby="basic-addon2" disabled>
+					<span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+				</div>
+				<input type="submit" value="Submit" style="position:relative;float:right;margin-right: 0px; margin-top:-35px; width:40px; height:34px ; opacity:0">
+			</form>
+		</div>
+	</div>
+</section>
+
+
+<!-- 	BUSQUEDA -->
+<div id="busqueda" class="row"></div>
+
+
+<!-- VIDEO -->
+<section id="video" class="container">
+	<div class="row container-fluid">
+		<div class="col-md-12">
+			<p class="section-title">Funciones y herramientas del Portafolio Digital</p>
+		</div>
+		<div class="clearfix"></div>
+		<div id="cont-video">
+			<div id="tex-video" class="col-md-6 col-sm-6">
+				<h3>¿Qué es el portafolio digital?</h3>
+				<img src="images/ico-calc.png">
+				<ul>
+					<li>Buscador Avanzado</li>
+					<li>Calculadoras interactivas</li>
+					<li>Guías prácticas de clínicas</li>
+					<li>Vademécum</li>
+				</ul>
+				<p>Especializado para el primer nivel de antención médica</p>
+			</div>
+			<div id="you-video" class="col-md-6 col-sm-6 col-xs-12">
+				<video id="sampleMovie" width="100%" preload controls poster="images/portadaVideoF.png">
+					<source src="resources/Fundacion_Carlos_Slim.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+				</video>
+			</div>
+		</div>
+	</div>
+	<div id="mob-video" class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5bZMYGw0_wQ"></iframe>
+	</div>
+</section>
+
+
+<!-- NOTICIAS -->
+<section id="noticias" class="container">
+	<div class="row" id="noticias_index">
+		<div class="col-md-12">
+			<p class="section-title">Noticias</p>
+		</div>
+		<div class="clearfix"></div>
+		<div id="btn-not1" style="background-image:url({{noticias_main[0].ImageUrl}})" ng-class="{'notImageNews' : !noticias_main[0].Title}">
+			<div id="over-not1" class="over-noticia" style='overflow:hidden'><p>{{noticias_main[0].Title}}</p></div>
+		</div>
+		<div id="sec-not2">
+			<div id="btn-not2" style="background-image:url({{noticias_main[1].ImageUrl}})" ng-class="{'notImageNews' : !noticias_main[1].Title}">
+				<div id="over-not2" class="over-noticia" style='overflow:hidden'><p>{{noticias_main[1].Title}}</p></div>
+			</div>
+			<div id="btn-not3" style="background-image:url({{noticias_main[2].ImageUrl}})" ng-class="{'notImageNews' : !noticias_main[2].Title}">	
+				<div id="over-not3" class="over-noticia" style='overflow:hidden'><p>{{noticias_main[2].Title}}</p></div>
+			</div>
+		</div>
+		<div id="btn-not4" style="background-image:url({{noticias_main[3].ImageUrl}})" ng-class="{'notImageNews' : !noticias_main[3].Title}">
+			<div id="over-not4" class="over-noticia" style='overflow:hidden'><p>{{noticias_main[3].Title}}</p></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- HERRAMIENTAS -->
+<section id="herramientas" class="container">
+	<div class="row container-fluid">
+		<div class="col-md-12">
+			<p class="section-title">Herramientas</p>
+		</div>
+		<div class="clearfix"></div>
+		<div id="btn-prac-herr" class="btn-herr col-md-4 col-sm-4 col-xs-12">
+			<img src="images/herra1.png">
+			<h5 class="herr-title">Prácticas Clínicas</h5>
+			<hr>
+			<p class="herr-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#/practicas-clinicas">
+				<button class="btn btn-ir-herr btn-warning">VER</button>
+			</a>
+		</div>
+		<div id="btn-calc-herr" class="btn-herr col-md-4 col-sm-4 col-xs-12">
+			<img src="images/herra2.png">
+			<h5 class="herr-title">Calculadoras de Salud</h5>
+			<hr>
+			<p class="herr-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#/imc"><button class="btn btn-ir-herr btn-primary">CALCULAR</button></a>
+		</div>
+		<div id="btn-vade-herr" class="btn-herr col-md-4 col-sm-4 col-xs-12">
+			<img src="images/herra3.png">
+			<h5 class="herr-title">Vadémecum</h5>
+			<hr>
+			<p class="herr-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<button id="call2Vade" class="btn btn-ir-herr btn-success">CONSULTAR</button>
+		</div>
+	</div>
+</section>
+
+
+<!-- INSTITUTO CS -->
+<section id="instituto-cs" class="container">
+	<div class="row container-fluid">
+		<div class="col-md-12">
+			<p class="section-title">Instituto Carlos Slim de la Salud</p>
+		</div>
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<img src="images/img5.jpg" class="instituto-img">
+			<p class="instituto-desc">Fue creado en el año 2007 por iniciativa del Ing. Carlos Slim Helú, como una organización no lucrativa dedicada a generar soluciones para ayudar a resolver los principales problemas de salud de la población más vulnerable de América Latina.</p>
+			<button class="btn btn-ir-herr btn-primary" id="btn-lern-more">CONOCE MÁS</button>
+		</div>
+	</div>
+</section>
+
+
+<!-- MAS VISITADOS -->
+<section id="mas-visitados" class="container">
+	<div class="row container-fluid">
+		<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+			<hr>
+			<div id="calc-list" class="col-md-5 col-sm-4 col-xs-12">
+				<p>Calculadoras de Salud</p>
+				<ul style="float:left">
+					<a href="#/imc"><li>Calculadora de índice de Masa Corporal</li></a>
+					<a href="#/cardio"><li>Calculadora de Riesgo Cardiovascular</li></a>
+					<a href="#/renal"><li>Calculadora de Función Renal</li></a>
+					<a href="#/calorico"><li>Calculadora de Gasto Calórico</li></a>
+					<a href="#/vacunacion"><li>Esquema de Vacunación</li></a>
+					<a href="#/actividad"><li>Calculadora de Actividad Física</li></a>
+				</ul>
+			</div>
+			<div id="calc-list-mob">
+				<p>Calculadoras de Salud</p>
+				<a href="#/actividad"><div class="list-mob-el btn-primary btn-cal-fisica">Calculadora de Actividad Física</div></a>
+				<a href="#/calorico"><div class="list-mob-el btn-primary btn-cal-calorico">Calculadora de Gasto Calórico</div></a>
+				<a href="#/renal"><div class="list-mob-el btn-primary btn-cal-masa">Calculadora de Índice de Masa Corporal</div></a>
+				<a href="#/cardio"><div class="list-mob-el btn-primary btn-cal-riesgo">Calculadora de Riesgo Cardiovascular</div></a>
+				<a href="#/renal"><div class="list-mob-el btn-primary btn-cal-renal">Calculadora de Función renal</div></a>
+			</div>
+			<div class="visitados">
+				<p>Más Visitados</p>
+				<div id="mv-txt1"><span class="mv-tam1 mv-blue">Home</span></div>
+				<div id="mv-txt2">
+					<span class="mv-tam2 mv-blue">Actividad Física</span>
+					<span class="mv-tam1 mv-blue">Vacunación</span>
+					<span class="mv-tam3 mv-blue">Práctica Clínica</span>
+				</div>
+				<div id="mv-txt3"><span class="mv-tam3 mv-blue">Gasto Calórico</span></div>
+				<script type="text/javascript">
+					//most_visited();
+				</script>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="menu-vademecum" class="menu col-md-11" style="display: none;">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<img src="images/vademecum.jpg" class="img-rounded img-menu-vade">
+					</div>
+					<div class="col-md-7 col-sm-8">
+						<div class="texto-vademecum">
+							<h4>Vademécum 2015</h4>
+							<p>Guía con información sobre los medicamentos, incluyendo dosis, presentaciones, vía de administración, indicaciones terapéuticas, contraindicaciones, reacciones secundarias y adversas</p>
+							<button class='btn btn-success' id='vademecumDisclaim'>CONSULTAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<div id="dialog_content2" class="dialog_content2" style="display:none;">
+				<div class="dialogModal_header">Sobre la información de <font class="blueModalTitle">medicamentos</font> en el  <font class="blueModalTitle">VADEMECUN</font>  del Portafolio Digital de la FCS</div>
+				<div class="dialogModal_content" style="margin:10px;">
+					<div style="padding-top:50px;">La FCS establece que las recomendaciones que se proporcionan en esta aplicación son de carácter informativo  y <font class="blueModalTitle">no substituyen</font> de ninguna manera las recomendaciones médicas y/o un especialista en la materia. El uso que se haga de esta aplicación <font class="blueModalTitle">es responsabilidad exclusiva del usuario.</div><div style="padding-top:15px;"></font> La base de datos de medicamentos se actualiza periódicamente con el objeto de recoger las últimas modificaciones y novedades habidas e integradas por parte del equipo proveedor. La FCS no tiene ningún fin comercial por lo que <font class="blueModalTitle">NO recomienda marca</font> alguna.</div>
+					<div align="center" style="padding-top:50px;padding-bottom:50px;"><button id="send2vademecum" class="calc-btn-send">Aceptar</button></div>
+				</div>
+				<!--<div class="dialogModal_footer">
+					<button type="button" class="btn btn-primary" data-dialogmodal-but="next">Next</button>
+					<button type="button" class="btn btn-default" data-dialogmodal-but="cancel">Cancel</button>
+				</div>-->
+			</div>

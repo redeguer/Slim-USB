@@ -1,0 +1,44 @@
+<style type="text/css">
+    #lg-mobil,
+    #lg-mobil-fb {
+      margin-top: -40px !important;
+    }
+    @media(max-width: 450px){
+      #cancela{
+        margin-top: -2px !important;
+        margin-left: 0px !important;
+        margin-right: -30px !important;
+      }
+    }
+</style>
+
+<div class="fluid-container clearfix">
+	<!-- SECTION ITEMS NEWS -->
+	<div class="col-md-12">
+	  <div id="all-news">
+	    <div ng-show="showDummieLoader">
+	      <div class="noticia-prev" ng-repeat="item_dummie in [1,2,3,4,5,6]">
+	        <img src="images/cargando.gif" style="width:50px;float:right;margin-right:43%;margin-top: 130px">
+	      </div>
+	    </div>
+	    <!-- -->
+	    <div>
+	    	<a href='#/noticias/{{item_noticia.ID}}' ng-repeat="item_noticia in noticias_page_view">
+	    		<div class='noticia-prev'>
+		    		<div style='background-image:url({{item_noticia.ImageUrl}})' class='img-noticia-prev'></div>
+		    		<p class='noticia-para'>{{item_noticia.Title}}</p>
+		    	</div>
+	    	</a>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- BUTTONS -->
+	<div class="container">
+	  <div id="btn_noticias_id_all" class="btn_noticias_sec_all" ng-hide="old_recent_toggle" ng-click="setBunchNews()" style="margin-bottom: 0px" ng-enabled="moreNewsEnabled"><i>Más Noticias...{{how_many}}/{{noticias_page_totals}}</i></div>
+	  <div id="btn_noticias_id_ant" class="btn_noticias_sec_ant" ng-hide="old_recent_toggle" ng-click="oldRecentToggle()" style="margin-bottom: 0px"><i>...Noticias más antiguas</i></div>
+	  <div id="btn_noticias_id_act" class="btn_noticias_sec_ant" ng-show="old_recent_toggle" ng-click="oldRecentToggle()" style="margin-bottom: 0px"><i>...Noticias más actuales</i></div>
+	</div>
+
+</div><!-- fluid-container -->

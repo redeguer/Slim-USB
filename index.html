@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="Private">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="scripts/jquery-ui/themes/start/jquery-ui.css">
+    <link rel="stylesheet" href="styles/slider.css">
+
+    <link rel="stylesheet" href="styles/fancyBox.css">
+    <link rel="stylesheet" href="styles/fancybox-buttons.css">
+    <link rel="stylesheet" href="styles/mediaelementplayer.css">
+    <link rel="stylesheet" href="styles/simplemodal.css">
+    <link rel="stylesheet" href="styles/style_common.css">
+    <link rel="stylesheet" href="styles/style5.css">
+    <link rel="stylesheet" href="styles/popModal.css">
+
+
+
+
+
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="fluid-container">
+    
+      <div header-tag></div>
+      
+      <div ng-view="" style="padding-top:150px;"></div>
+        
+      <div footer-tag></div>
+
+    </div>
+
+    <div status-bar class="fluid-container"></div>
+
+    <div class="lBox-loader" id="main-lBox-loader" align="center">
+        <h4><span class="letter-sequence fade-in once">Cargando datos, espere un momento...</span></h4>
+        <p id="msg-loader"></p>
+    </div>
+
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/scripts.js"></script>
+        <script src="scripts/jquery-ui/jquery-ui.js"></script>
+
+        <script type="text/javascript">
+
+
+        function showDisclaim (){
+        window.open('http://www.medicamentos.com.mx/systems/xt_sign.asp?instituto_v=71TF1A','_blank');
+      }   
+
+      function send2vademecum (){
+        window.open('http://www.medicamentos.com.mx/systems/xt_sign.asp?instituto_v=71TF1A','_blank');
+      }
+
+    </script>
+
+</body>
+</html>

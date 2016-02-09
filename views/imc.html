@@ -1,0 +1,86 @@
+		<section id="imc-calculator" class="container">
+
+
+
+
+			<div class="row container-fluid">
+				<div class="col-md-12">
+					<div class="calculator-title"> Calculadora de Índice de Masa Corporal</div>
+				</div>
+				<div class="col-md-5">
+					<div id="imc-control" class="calc-controls-container">
+						<div class="calc-control-item">
+							<label class="calc-item-name alignCheckAttr">* Sexo:</label>
+
+							<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="male" class="radio-button radio-button-masa lookLkCheckbx" checked name="gender" ng-model="gender" ng-change="change()" value="1" />
+									<label class="label-radio-button" for="male">Masculino</label>
+								</div>
+
+								<div class="wrapper-radio-button">
+									<input type="radio" id="female" class="radio-button radio-button-masa lookLkCheckbx" name="gender" ng-model="gender" ng-change="change()" value="2" />
+									<label class="label-radio-button" for="female">Femenino</label>
+								</div>
+						</div>
+
+            <!-- PESO -->
+            <div class="calc-control-item">
+              <p>* Peso <input type="number" inputs-slider id="caloric-input-weight" id-nameslider="slider-weight" ng-model="weight"  ng-change="change()" min="0" max="150" value="0" class="inputs-slider-range" /> (Kg)</p>
+              <div sliders-range class="sliders-ranges slider-purple" id-input="caloric-input-weight" ng-mouseup="ng-change()" id="slider-weight" my-scope="weight" min-range=0 max-range=150 step-range=1 value-range=0></div>
+              <div class="calc-drag-limits">
+                <span class="calc-limit-left">0 Kg</span>
+                <span class="calc-limit-right">150 kg</span>
+              </div>
+              <p class="error-input" id="error_weight"></p>
+            </div>
+
+            <!-- ESTATURA -->
+            <div class="calc-control-item">
+              <p>Estatura<input type="number" inputs-slider id="caloric-input-height" id-nameslider="slider-height" ng-model="height"  ng-change="change()" min="0" max="210" value="0" /> (cm)</p>
+              <div sliders-range class="sliders-ranges slider-yellow" id-input="caloric-input-height" ng-mouseup="ng-change()" id="slider-height" my-scope="height" min-range=0 max-range=210 step-range=1 value-range=0></div>
+              <div class="calc-drag-limits">
+                <span class="calc-limit-left">0 cm</span>
+                <span class="calc-limit-right">210 cm</span>
+              </div>
+              <p class="error-input" id="error_height"></p>
+            </div>
+
+            <!-- CIRCUNFERENCIA -->
+            <div class="calc-control-item">
+              <p>La circunferencia para personas mayores de 18 años es: 80 cm mujeres y 90 cm hombres.
+                <input type="number" inputs-slider id="caloric-input-waist" id-nameslider="slider-waist" ng-model="waist"  ng-change="change()" min="0" max="210" step="1" value="0" /> (cm)</p>
+              <div sliders-range class="sliders-ranges slider-dark-purple" id-input="caloric-input-waist" ng-mouseup="ng-change()" id="slider-waist" my-scope="waist" min-range=0 max-range=210 step-range=1 value-range=0></div>
+              <div class="calc-drag-limits">
+                <span class="calc-limit-left">0 cm</span>
+                <span class="calc-limit-right">210 cm</span>
+              </div>
+              <p class="error-input" id="error_waist"></p>
+            </div>
+
+					</div>
+					<button id="imc-btn-reset" class="calc-btn-reset" ng-click="resetform()">Reiniciar</button>
+					<label>Campos Obligatorios *</label>
+				</div>
+				<div class="col-md-6 col-md-offset-1 centered-text">
+                    <div id="imc-indicator-title" class="calculator-result-title">{{parameters[0].text}}</div>
+					<div id="imc-arc-container">
+            <canvas id="antialiasing-inner-arc" width="350" height="170"> </canvas>
+            <canvas id="antialiasing-outer-arc" width="400" height="200"> </canvas>
+            <canvas id="imc-arc" width="400" height="200"></canvas>
+            <div id="imc-image">
+              <img src="{{parameters[0].image}}">
+            </div>
+				   </div>
+                    <div id="imc-values">
+                        <p>Su índice de Masa Corporal es: </p>
+                        <h3 id="imc-value">{{imc}} kg/m<sup>2</sup></h3>
+                        <div class="grey-line-thin"></div>
+                        <p>Peso Recomendable</p>
+                        <h4 id="recommended-weight">{{recommended_weight}} kg</h4>
+                    </div>
+                    <input type="hidden" id="limite_imc" value="{{limite}}" />
+                    <input type="hidden" id="stroke_style" value="{{parameters[0].color}}" />
+                </div>
+			</div>
+		</section>
+

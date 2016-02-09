@@ -1,0 +1,338 @@
+<script>
+	$(window).scroll(function() {
+		try{
+	    	if($(window).scrollTop() > 160) {
+	        	 document.getElementById('barra-buscador-nav').style.display = "block";
+	     	}
+	     	if($(window).scrollTop() < 160) {
+	        	 document.getElementById('barra-buscador-nav').style.display = "none";
+	     	}
+		}catch(err){
+			
+		}
+	});
+</script>
+
+
+
+<!-- HEADER -->
+<header>
+	<div id="top-blue-line"></div>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 col-xs-12">
+
+				<!--<div id="logo">
+					<img src="images/logo.png" style="max-height:40px;">
+				</div>
+				<div id="portal-name">
+					<i>Portafolio Digital</i>
+				</div>-->
+				<div id="social-networks">
+					<div id="barra-buscador-nav" class="col-md-4 col-sm-9 col-xs-9" style="display:none;">
+						<form action="consulta.php" method="GET" id="form-id">
+							<div class="input-group">
+								<input type="text" name="word" id="busca-nav" class="form-control" placeholder="Diabetes, Hipertensión, Obesidad, etc." aria-describedby="basic-addon2" disabled>
+								<span class="input-group-addon" id="basic-addon2">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</span>
+							</div>
+						</form>
+					</div> 
+					<div id="sub-social-networks">
+						<div class="sn-ind deactivated sn-tw"></div>
+						<div class="sn-ind deactivated sn-fb"></div>
+						<div class="sn-ind deactivated sn-lgin"></div>
+					</div>
+				</div>
+				<div id="btn-menu-mob" ng-click="menuMobSow()">
+					<img src="images/menu.png" class="menu-img">
+				</div>
+				<div id="btn-search-mob">
+					<img src="images/search-icon.png" ng-click="mobSearch()" class="search-img">
+				</div>
+
+			</div>
+
+		</div><!-- row -->
+	</div><!-- container -->
+
+</header>
+
+<!-- MAIN NAV -->
+<nav>
+	<div class="container">
+
+			
+
+		<div id="navbar">
+			<ul class="navli">
+				<div style='float:left; width:4%;'><a href='#/'><li id='li-inicio'><span id='txt-mob-incio'>Inicio</span></li></a></div>
+				<div style='float:left; width:8%;'><a href='#/noticias' class='hiper-practicas'><li id='li-noticias' style='position: relative;float: left;bottom: 20px;'>&nbsp;Actualidad en Salud</li></a></div>
+				<div class='liquidCol10'><a href='#/practicas-clinicas' class='hiper-practicas'><li id='li-practicas' style='position: relative;float: left;bottom: 20px;'>Guias de Práctica Clínica</li></a></div>
+				<div class='liquidCol10'><li id='li-calculadora' style='position: relative;float: left;bottom: 20px;'>Calculadora de Salud</li></div>
+				<div class='liquidCol10'><li id='li-vademecum'>&nbsp;Vademécum</li></div>
+
+				<div class='liquidCol10'><li id='li-linea-vida'>&nbsp;Linea de Vida</li></div>
+				<div class='liquidCol10'><a class='vacc_link' href='#/vacunacion'><li id='li-conoce' style='position: relative;float: left;bottom: 20px;'>Esquema de Vacunación</li></a></div>
+				<div class='liquidCol10'><a href="#/pieenso"><li id='li-pieenso' style='position: relative;float: left;bottom: 20px;'>&nbsp;Pieenso en la operación</li></a></div>
+				<li id='li-descarga' onclick='showDwnloadMdl();'><span class='texto-li-descarga'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Descarga / Actualizar App</span></li>
+				<li id='logo-slim-mob'></li>
+				<!--<li id="li-conoce">&nbsp;Conoce más</li>
+				<li id="li-descarga-off"><span class="texto-li-descarga">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Descargar</span></li>
+				<li id="logo-slim-mob"></li> -->
+			</ul>
+		</div>
+	</div> 
+</nav>
+
+<!-- COLLAPSED MENU  -->
+<section id="nav-menu" style="display: none;">
+	<div class="container">
+		<div class="row">
+
+			<div id="menu-noticias" class="menu col-md-11" style="display: none;">
+				<div class="row">
+
+					<!-- news 1 -->
+					<div class="col-md-2 col-sm-2" ng-repeat-start="item_noticia in noticias_menu">
+						<img ng-src="{{item_noticia.ImageUrl}}" class="img-rounded">
+					</div>
+
+					<div class="col-md-4 col-sm-4" ng-repeat-end>
+						<div class="texto-noticia">
+							<h5>{{item_noticia.Title}}</h5>
+							<p id="txt-n1" class="hidden-text" ng-bind-html="item_noticia.Teaser"></p>
+							<a href='#/noticias/{{item_noticia.ID}}'>
+								<button class='btn btn-primary'>Ver noticia</button>
+							</a>
+							<div class="sn-ind sn-tws"></div>
+							<div class="sn-ind sn-fbs"></div>
+						</div>
+					</div>
+					<!-- news 1 -->
+
+				</div>
+			</div>
+
+
+			<div id="menu-practicas" class="menu" style="display: none;">
+				<div class="row">
+					<a href="#/seccion-catalogo/cronicas" class="hiper-practicas">
+						<div class="btn-pract col-md-2 col-sm-2">
+							<div class="btn-red"></div>
+							<img src="images/cronicas.png" class="img-pract">
+							<p class="btn-title-pract">Enfermedades Crónicas</p>
+						</div>
+					</a>
+					<a href="#/seccion-catalogo/materna" class="hiper-practicas">
+						<div class="btn-pract col-md-2 col-sm-2">
+							<div class="btn-purple"></div>
+							<img src="images/materna.png" class="img-pract">
+							<p class="btn-title-pract">Materno-Infantil</p>
+						</div>
+					</a>
+					<a href="#/seccion-catalogo/ninez" class="hiper-practicas">
+						<div class="btn-pract col-md-2 col-sm-2">
+							<div class="btn-orange"></div>
+							<img src="images/ninez.png" class="img-pract">
+							<p class="btn-title-pract">Enfermedades de la niñez</p>
+						</div>
+					</a>
+					<a href="#/seccion-catalogo/infecciosas" class="hiper-practicas">
+						<div class="btn-pract col-md-2 col-sm-2">
+							<div class="btn-blue"></div>
+							<img src="images/infecciosas.png" class="img-pract">
+							<p class="btn-title-pract">Enfermedades infeccionsas frecuentes</p>
+						</div>
+					</a>
+
+					<a href='http://www.cenetec.salud.gob.mx/contenidos/gpc/catalogoMaestroGPC.html' target='_blank' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-green'></div>
+							<img src='images/otros.png' class='img-pract'>
+							<p class='btn-title-pract' style='padding-top:5px;'>Otros</p>
+						</div>
+					</a>";
+
+
+				</div>
+			</div>
+
+			<div id="menu-calculadora" class="menu col-md-11" style="display: none;">
+				<div class="row">
+					<div style="text-align:center !important;">
+						<div class="hintModal">
+							<a href="#/imc">
+								<div id="btn-calc-mc" class=" btn-calc col-md-2 col-sm-2">
+									<img src="images/calc3.png">
+									<p>Calculadora de Índice de Masa Corporal</p>
+								</div>
+							</a>
+							<div class="hintModal_container" style="margin-top:180px; margin-left:350px;">asdflajsdflñjaslkñdfjaslkdfjasñl</div>
+						</div>
+						<a href="#/actividad">
+							<div id="btn-calc-af" class="btn-calc col-md-2 col-sm-2">
+								<img src="images/calc1.png">
+								<p>Calculadora de Actividad Física</p>
+							</div>
+						</a>
+						<a href="#/calorico">
+							<div id="btn-calc-gc" class="btn-calc col-md-2 col-sm-2">
+								<img src="images/calc2.png">
+								<p>Calculadora de Gasto Calórico</p>
+							</div>
+						</a>
+						
+						<a href="#/cardiovascular">
+							<div id="btn-calc-rc" class="btn-calc col-md-2 col-sm-2">
+								<img src="images/calc4.png">
+								<p>Calculadora de Riesgo Cardiovascular</p>
+							</div>
+						</a>
+						<a href="#/renal">
+							<div id="btn-calc-fr" class="btn-calc col-md-2 col-sm-2">
+								<img src="images/calc5.png">
+								<p>Calculadora de Función Renal</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="menu-vademecum" class="menu col-md-11" style="display: none;">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<img src="images/vademecum.jpg" class="img-rounded img-menu-vade">
+					</div>
+					<div class="col-md-7 col-sm-8">
+						<div class="texto-vademecum">
+							<h4>Vademécum 2015</h4>
+							<p>Guía con información sobre los medicamentos, incluyendo dosis, presentaciones, vía de administración, indicaciones terapéuticas, contraindicaciones, reacciones secundarias y adversas</p>
+							<button class='btn btn-success' id='vademecumDisclaim'>CONSULTAR</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id='menu-linea-vida' class='menu' style="display: none;">
+				<div class='row'>
+					<a href='#/manual1' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							<img src='images/linea/carreola.png' class='img-pract'>
+							<p class='btn-title-pract'>0 a 6 <br>años</p>
+						</div>
+					</a>
+					<a href='#/manual2' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							 <img src='images/linea/nina.png' class='img-pract'>
+							<p class='btn-title-pract'>7 a 12 <br>años</p>
+						</div>
+					</a>
+					<a href='#/manual3' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							<img src='images/linea/nino.png' class='img-pract'>
+							<p class='btn-title-pract'>13 a 17 <br>años</p>
+						</div>
+					</a>
+					<a href='#/manual4' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							<img src='images/linea/mujer.png' class='img-pract'>
+							<p class='btn-title-pract'>18 a 39 <br>años</p>
+						</div>	
+					</a>
+					<a href='#/manual5' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							<img src='images/linea/hombre.png' class='img-pract'>
+							<p class='btn-title-pract'>40 a 69 <br>años</p>
+						</div>	
+					</a>
+					<a href='#/manual6' class='hiper-practicas'>
+						<div class='btn-pract col-md-2 col-sm-2'>
+							<div class='btn-real-purple'></div>
+							<img src='images/linea/carreola.png' class='img-pract'>
+							<p class='btn-title-pract'>70 años<br>y más</p>
+						</div>	
+					</a>
+				</div>
+			</div>
+
+			<div id="menu-conoce" class="menu col-md-11" style="display: none;">
+				<div class="row">
+					<a href="#/vacunacion">
+						<div id="btn-conoce-ev" class="btn-con col-md-2 col-sm-2">
+							<img src="images/vacuna.png">
+							<p>Esquema de Vacunación</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		</div><!-- row -->
+	</div><!-- container -->
+</section>
+
+<div id="dialog_content2" class="dialog_content2" style="display:none;">
+				<div class="dialogModal_header">Sobre la información de <font class="blueModalTitle">medicamentos</font> en el  <font class="blueModalTitle">VADEMECUN</font>  del Portafolio Digital de la FCS</div>
+				<div class="dialogModal_content" style="margin:10px;">
+					<div style="padding-top:50px;">La FCS establece que las recomendaciones que se proporcionan en esta aplicación son de carácter informativo  y <font class="blueModalTitle">no substituyen</font> de ninguna manera las recomendaciones médicas y/o un especialista en la materia. El uso que se haga de esta aplicación <font class="blueModalTitle">es responsabilidad exclusiva del usuario.</div><div style="padding-top:15px;"></font> La base de datos de medicamentos se actualiza periódicamente con el objeto de recoger las últimas modificaciones y novedades habidas e integradas por parte del equipo proveedor. La FCS no tiene ningún fin comercial por lo que <font class="blueModalTitle">NO recomienda marca</font> alguna.</div>
+					<div align="center" style="padding-top:50px;padding-bottom:50px;"><button id="send2vademecum" class="calc-btn-send">Aceptar</button></div>
+				</div>
+				<!--<div class="dialogModal_footer">
+					<button type="button" class="btn btn-primary" data-dialogmodal-but="next">Next</button>
+					<button type="button" class="btn btn-default" data-dialogmodal-but="cancel">Cancel</button>
+				</div>-->
+			</div>
+
+<!-- MOBILE MENU -->
+<section id="menu_mobil">
+	<div class="col-sm-12">
+		<a href="index.html">
+			<li id="li-inicio-mob">&nbsp;<span id="txt-mob-incio-resp">Inicio<span></span></span></li>
+		</a>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<a href="#/noticias" class="hiper-practicas">
+			<li id="li-noticias">&nbsp;<span class="txt_menu_mobil_resp">Noticias</span></li>
+		</a>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		
+			<li id="li-practicas"><span class="txt_menu_mobil_resp">&nbsp;Guias de Práctica Clínica</span></li>
+		
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<li id="li-calculadora"><span class="txt_menu_mobil_resp">&nbsp;Calculadora de Salud</span></li>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<a href="http://www.medicamentos.com.mx/systems/xt_sign.asp?instituto_v=71TF1A" target="s_blank'">
+			<li id="li-vademecum"><span class="txt_menu_mobil_resp">&nbsp;Vademécum</span></li>
+		</a>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<li id="li-conoce"><span class="txt_menu_mobil_resp">&nbsp;Conoce más</span></li>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<li id="li-descarga-mob"><span class="txt_menu_mobil_resp">&nbsp;Descargar</span></li>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<li id="li-fb"><span class="txt_menu_mobil_resp">&nbsp;Facebook</span></li>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<li id="li-twt"><span class="txt_menu_mobil_resp">&nbsp;Twitter</span></li>
+	</div>
+	<div class="col-sm-12 menu_mob_sec">
+		<div id="lg_name">
+			<li id="li-lg"><span class="txt_menu_mobil_resp">&nbsp;Iniciar Sesión</span></li>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,103 @@
+.ui-slider{background-color:#CCC;border-radius:50%;height:3px;width: 100%;}
+
+.ui-slider span.ui-slider-handle{width: 42px;height: 42px;top:-18px;cursor: pointer;border-radius: 50%;}
+.ui-slider-handle:focus{outline:none;}
+
+.slider-red .ui-slider-handle{background-color:#F53333;}
+.slider-medium-red .ui-slider-handle{background-color:#F55757;}
+.slider-light-red .ui-slider-handle{background-color:#F57373;}
+.slider-light-dark-red .ui-slider-handle{background-color:#B10808;}
+.slider-medium-dark-red .ui-slider-handle{background-color:#A20808;}
+.slider-orange .ui-slider-handle{background-color:#ff7f00;}
+.slider-dark-red .ui-slider-handle{background-color:#690808;}
+.slider-purple .ui-slider-handle{background-color:#814296;}
+.slider-dark-purple .ui-slider-handle{background-color:#502555;}
+
+.slider-black .ui-slider-handle{background-color:#0a0a0a;}
+
+.slider-yellow .ui-slider-handle{background-color:#ffa500;}
+
+
+.inputs-slider-range{width:36px;margin-left:5px;margin-right:5px;}
+
+
+.tooltip-slider, .tooltip_bottom{width: 40px;height: 20px;position: absolute;display: block;top: 10px;text-align: center;color: #FFF;font-size: 15px;}
+
+#caloric-container{overflow:hidden;}
+.wrap-carousel{width:200px;position: relative;height: 115px;overflow:hidden;}
+#caloric-container ul{position:relative;left:0;top:0;list-style:none;margin:0;padding:0;width:600px;height: 115px;}
+#caloric-container ul li{width: 200px;color:#F54141;font-size:70px;float: left;text-align: center;}
+
+
+#ocean{
+  position:absolute;
+  width:100%;
+  min-height:400px;
+  top:130px;
+  -webkit-animation-name:             leftocean;
+  -webkit-animation-duration:         6s;
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+.element1 #ocean{background-color:#A9E2F3;top:190px;}
+.element2 #ocean{background-color:#42D55F;top:136px;}
+.element3 #ocean{background-color:#F0EB46;top:82px;}
+.element4 #ocean{background-color:#E69B4B;top:28px;}
+.element5 #ocean{background-color:#E96244;top:-26px;}
+.element6 #ocean{background-color:#F54141;top:-80px;}
+
+.element1 .change-color{color:#A9E2F3}
+.element2 .change-color{color:#42D55F}
+.element3 .change-color{color:#F0EB46}
+.element4 .change-color{color:#E69B4B}
+.element5 .change-color{color:#E96244}
+.element6 .change-color{color:#F54141}
+
+.wave{
+  background:#FFF;
+  display:inline-block;
+  height:40%;
+  width:5px;
+  position:absolute;
+  -webkit-animation-name:             dostuff;
+  -webkit-animation-duration:         6s;
+  -webkit-animation-iteration-count:  infinite;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+
+@-webkit-keyframes dostuff{
+  0%{height:40%;}
+  50%{height:20%;}
+  100%{height:40%;}
+}
+@-webkit-keyframes leftocean {
+  0%{left:-4%;}
+  20%{left:-2%}
+  40%{left:0%;}
+  60%{left:2%;}
+  80%{left:0%;}
+  100%{left:-4%;}
+ }
+
+
+.elements_color1 .change-color{color:#77da02;}
+.elements_color2 .change-color{color:#ffd200;}
+.elements_color3 .change-color{color:#ff7f00;}
+.elements_color4 .change-color{color:#d30007;}
+.elements_color5 .change-color{color:#910005;}
+
+.elements_color1 .calc-oline-percent{background-color:#77da02;}
+.elements_color2 .calc-oline-percent{background-color:#ffd200;}
+.elements_color3 .calc-oline-percent{background-color:#ff7f00;}
+.elements_color4 .calc-oline-percent{background-color:#d30007;}
+.elements_color5 .calc-oline-percent{background-color:#910005;}
+
+
+/* Riesgo */
+.no_risk{background-color:#30B426;}
+.risk{background-color:#C1331A;}
+
+/* Error input */
+.error-input{color:#F53333;font-size:12px;font-weight:bold;}

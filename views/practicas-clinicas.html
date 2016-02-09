@@ -1,0 +1,438 @@
+<style type="text/css">
+  #cuadro-login,
+  #cuadro-registro{
+    margin-top: 50px !important;
+  }
+  @media(max-width: 1000px){
+    #cancela{
+      margin-top: -40px !important;
+    }
+  }
+  @media(max-width: 840px){
+    #cancela{
+      margin-top: -35px !important;
+    }
+  }
+  @media(max-width: 800px){
+    #cancela{
+      margin-top: -45px !important;
+    }
+  }
+  @media(max-width: 700px){
+    #btn-aceptar-registro{
+      margin-top: 7px !important;
+    }
+  }
+  @media(max-width: 650px){
+    #cancela{
+      margin-top: -35px !important;
+    }
+  }
+  @media(max-width: 560px){
+    #cancela{
+      margin-top: -25px !important;
+    }
+  }
+  @media(max-width: 450px){
+    #cancela{
+      margin-top: -33px !important;
+      margin-left: 0px !important;
+      margin-right: -30px !important;
+    }
+  }
+  @media(max-width: 450px){
+    #cancela{
+      margin-top: -29px !important;
+    }
+  }
+  @media(max-width: 450px){
+    #cuadro-login,
+    #cuadro-registro{
+      margin-top: 90px !important;
+    }
+  }
+</style>
+
+<!-- -->
+<div class="fluid-container clearfix">
+
+		<section id="catalogo-maestro" class="">
+		  <div class="">
+		    <a href="http://www.cenetec.salud.gob.mx/contenidos/gpc/catalogoMaestroGPC.html" target='_blank'>
+		      <div id="img-catalogo" class="">
+		      </div>
+		    </a>
+		  </div>
+		</section>
+
+		  <div class="practicas-background"></div>
+
+		  <!-- CAROUCEL MOBILE -->
+		  <section id="vista-movil-practicas">
+	      	<div id="carousel-example-generic" class="carousel slide slide-movil-practicas" data-ride="carousel">
+		        <!-- Wrapper for slides -->
+		        <div class="carousel-inner" role="listbox">
+		        	<!-- item mobile -->
+			        <div class="item active" id="item1">
+			            <div id='titulo-movil1' class='titulo-movil'>
+				        	<p>
+				        		<span class='title-txt-slide'>{{main_carrusel_item1.Name}}</span><br><br>{{main_carrusel_item1.Description}}
+				        	</p>
+				        	<a href='#/vista-pdf/{{main_carrusel_item1.ID}}'>
+                  <!--<a href='#/vista-pdf/{{main_carrusel_item1.ID}}?url_pdf={{main_carrusel_item1.MediaObject[1].PDFMediaObject.URL}}&url_fav={{main_carrusel_item1.Category.Description}}/{{main_carrusel_item1.Description}}/{{main_carrusel_item1.Name}}&nombre={{main_carrusel_item1.Name}}' target='_blank'>-->
+				        		<button class='btn btn-consulta-movil-pdf'>CONSULTAR</button>
+				        	</a>
+				        </div>
+			        </div>
+			        <!-- i m -->
+			        <div class="item" ng-repeat="item_last_carro in main_carrusel_rest">
+			            <div id='titulo-movil1' class='titulo-movil'>
+				        	<p>
+				        		<span class='title-txt-slide'>{{item_last_carro.Name}}</span><br><br>{{item_last_carro.Description}}
+				        	</p>
+				        	<a href='#/vista-pdf/{{item_last_carro.ID}}'>
+                  <!--<a href='#/vista-pdf/{{item_last_carro.ID}}?url_pdf={{item_last_carro.MediaObject[1].PDFMediaObject.URL}}&url_fav={{item_last_carro.Category.Description}}/{{item_last_carro.Description}}/{{item_last_carro.Name}}&nombre={{item_last_carro.Name}}' target='_blank'>-->
+				        		<button class='btn btn-consulta-movil-pdf'>CONSULTAR</button>
+				        	</a>
+				        </div>
+			        </div>
+		        </div>
+		        <!-- Indicators -->
+		        <div>
+		          <ol class="carousel-indicators">
+		            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		          </ol>
+		        </div>
+	      	</div>
+	    </section>
+
+	    <!-- CAROUCEL DESKTOP -->
+    	<section id="slider-practicas-one" class="container">
+          <div class="row">
+            <div id="carousel" class="carousel slide col-md-12" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox" id="carousel-practicas-head">
+                <div class="item active" style="margin-top:40px">
+                  	<!-- the item -->
+                	<div class='row'>
+	                  	<div style='text-align:center' class='img-slider col-md-1 col-md-offset-0 col-lg-1 col-lg-offset-0'>
+			                <div class='pdf-prev' style='width:250px; height:320px !important'>
+				                <div style='background-image:url({{main_carrusel_item1.MediaObject[0].PDFMediaObject.URL}})' class='img-pdf-prev-car'>
+				                  	<img class='img_carr_sec' ng-src='images/{{main_carrusel_item1.category_img}}'>
+				                </div>
+			                	<p class='pdf-para-carr'>{{main_carrusel_item1.Description}}</p>
+			                </div>
+			            </div>
+			            <div class='txt-slider col-sm-9 col-md-10 col-md-offset-1 col-lg-7 col-lg-offset-2'>
+                      <h3>{{main_carrusel_item1.Name}}</h3>
+                      <p>{{main_carrusel_item1.Description}}</p>
+                      <a href='#/vista-pdf/{{main_carrusel_item1.ID}}'>
+                      <!--<a href='#/vista-pdf/{{main_carrusel_item1.ID}}?url_pdf={{main_carrusel_item1.MediaObject[1].PDFMediaObject.URL}}&url_fav={{main_carrusel_item1.Category.Description}}/{{main_carrusel_item1.Description}}/{{main_carrusel_item1.Name}}&nombre={{main_carrusel_item1.Name}}' target='_blank'>-->
+                        <button class='btn btn-consulta' style='margin-right:10px'>Consultar</button>
+                      </a>
+                      <a href='https://fundacioncsapidevel.azurewebsites.net/api/PDF/{{main_carrusel_item1.ID}}/File' target='_blank'>
+                        <button class='btn btn-descarga'>Descargar</button>
+                      </a>
+                      </div>
+                  	</div>
+                  	<!-- the item -->
+                </div>
+                <!-- LAST -->
+                <div class="item" style="margin-top:40px" ng-repeat="item_last_carro in main_carrusel_rest">
+                 	<!-- the item -->
+                	<div class='row'>
+	                  	<div style='text-align:center' class='img-slider col-md-1 col-md-offset-0 col-lg-1 col-lg-offset-0'>
+			                <div class='pdf-prev' style='width:250px; height:320px !important'>
+				                <div style='background-image:url({{item_last_carro.MediaObject[0].PDFMediaObject.URL}})' class='img-pdf-prev-car'>
+				                  	<img class='img_carr_sec' ng-src='images/{{item_last_carro.category_img}}'>
+				                </div>
+			                	<p class='pdf-para-carr'>{{item_last_carro.Description}}</p>
+			                </div>
+			            </div>
+			            <div class='txt-slider col-sm-9 col-md-10 col-md-offset-1 col-lg-7 col-lg-offset-2'>
+			                <h3>{{item_last_carro.Name}}</h3>
+			                <p>{{item_last_carro.Description}}</p>
+			                <a href='#/vista-pdf/{{item_last_carro.ID}}'>
+                      <!--<a href='#/vista-pdf/{{item_last_carro.ID}}?url_pdf={{item_last_carro.MediaObject[1].PDFMediaObject.URL}}&url_fav={{item_last_carro.Category.Description}}/{{item_last_carro.Description}}/{{item_last_carro.Name}}&nombre={{item_last_carro.Name}}' target='_blank'>-->
+			                	<button class='btn btn-consulta' style='margin-right:10px'>Consultar</button>
+			                </a>
+			                <a href='https://fundacioncsapidevel.azurewebsites.net/api/PDF/{{item_last_carro.ID}}/File' target='_blank'>
+			                	<button class='btn btn-descarga'>Descargar</button>
+			                </a>
+	                  	</div>
+                  	</div>
+                  	<!-- the item -->
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- JUST MOBILE not caroucel -->
+      <section id="section-cronicas-mobil" class="container">
+          <div id="sec_cronicas" class="row container-fluid" ng-click="catMobPdf('cronicas')">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div id="nom_cronicas-mobil" class="nombre-seccion-mobil">
+                <div class="center-vert">
+                  <img src="images/cronicas.png">
+                  <p>Enfermedades Crónicas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="sec_materna" class="row container-fluid" ng-click="catMobPdf('materna')">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div id="nom_materna-mobil" class="nombre-seccion-mobil">
+                <div class="center-vert">
+                  <img src="images/materna.png">
+                  <p>Salud Materno-Infantil</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="sec_ninez" class="row container-fluid" ng-click="catMobPdf('ninez')">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div id="nom_ninez-mobil" class="nombre-seccion-mobil">
+                <div class="center-vert">
+                  <img src="images/ninez.png">
+                  <p>Enfermedades de la Niñez</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="sec_infecciosas" class="row container-fluid" ng-click="catMobPdf('infecciosas')">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div id="nom_infecciosas-mobil" class="nombre-seccion-mobil">
+                <div class="center-vert">
+                  <img src="images/infecciosas.png">
+                  <p>Enfermedades Infecciosas Frecuentes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- CRONICAS -->
+      <section id="section-cronicas" class="container">
+          <div class="container-fluid row">
+            <div class="subseccion">
+              <a href="#/seccion-catalogo/cronicas">
+                <div id="nom_cronicas" class="nombre-seccion">
+                  <div class="center-vert">
+                    <img src="images/cronicas.png">
+                    <p>Enfermedades Crónicas</p>
+                  </div>
+                </div>
+              </a>
+              <div class="contenedor-pdfs">
+                <div id="carousel-example-generic5" data-interval="false" class="carousel slide carousel-size" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner carousel-inner-cronicas carousel-inner-cronicas" role="listbox" id="cronicas-cont">
+                        <div class="item active">
+                          <div class="pdf-prev" ng-repeat="item_cronicas in cronicas_carrusel_items_active">
+                                <div style="background-image:url({{item_cronicas.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_cronicas.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_cronicas.Name}}</p>
+                          </div>
+                        </div>
+
+                        <div class="item" ng-repeat="items_cronicas_group in cronicas_carrusel_items">
+                          <div class="pdf-prev" ng-repeat="item_cronicas in items_cronicas_group">
+                                <div style="background-image:url({{item_cronicas.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_cronicas.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_cronicas.Name}}</p>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Wrapper for slides end -->
+                    <!-- Controls -->
+                    <!-- <div>
+                      <a id="prev_btn5" class="left carousel-control" href="#carousel-example-generic5" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                      </a>
+                    </div>   -->
+                    <div>
+                      <a id="next_btn5" class="right carousel-control" href="#carousel-example-generic5" role="button" data-slide="next" onclick="return false;">
+                      <img src="images/flecha.png" width="26px" height="26px" class="flecha-carousel">
+                      <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    <!-- Controls end -->
+                </div><!-- #carousel-example-generic5 -->
+              </div><!-- contenedor-pdfs -->
+              <div id="chevron-right" class="chevron-pdf-list"></div>
+            </div><!-- subseccion -->
+          </div>
+      </section>
+
+      <!-- MATERNAS -->
+      <section id="section-materna" class="container">
+        <div class="container-fluid row">
+          <div class="subseccion">
+            <a href="#/seccion-catalogo/materna">
+              <div id="nom_materna" class="nombre-seccion">
+                <div class="center-vert">
+                  <img src="images/materna.png">
+                  <p>Salud Materno-Infantil</p>
+                </div>
+              </div>
+            </a>
+            <div class="contenedor-pdfs">
+              <div id="carousel-example-generic1" data-interval="false" class="carousel slide carousel-size" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner carousel-inner-materno carousel-inner-materno" role="listbox" id="materno-cont">
+                      <div class="item active">
+                          <div class="pdf-prev" ng-repeat="item_materna in materna_carrusel_items_active">
+                                <div style="background-image:url({{item_materna.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_materna.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_materna.Name}}</p>
+                          </div>
+                        </div>
+
+                        <div class="item" ng-repeat="items_materna_group in materna_carrusel_items">
+                          <div class="pdf-prev" ng-repeat="item_materna in items_materna_group">
+                                <div style="background-image:url({{item_materna.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_materna.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_materna.Name}}</p>
+                          </div>
+                        </div>
+                  </div>
+                  <!-- Wrapper for slides end -->
+                  <!-- Controls -->
+                  <div>
+                    <a id="next_btn5" class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next" onclick="return false;">
+                    <img src="images/flecha.png" width="26px" height="26px" class="flecha-carousel">
+                    <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <!-- Controls end -->
+              </div><!-- #carousel-example-generic1 -->
+            </div><!-- contenedor-pdfs -->
+            <div id="chevron-right" class="chevron-pdf-list"></div>
+          </div><!-- subseccion -->
+        </div>
+      </section>
+
+      <!-- NINEZ -->
+      <section id="section-ninez" class="container">
+        <div class="container-fluid row">
+          <div class="subseccion">
+            <a href="#/seccion-catalogo/ninez">
+              <div id="nom_ninez" class="nombre-seccion">
+                <div class="center-vert">
+                  <img src="images/ninez.png">
+                  <p>Enfermedades de la Niñez</p>
+                </div>
+              </div>
+            </a>
+            <div class="contenedor-pdfs">
+              <div id="carousel-example-generic3" data-interval="false" class="carousel slide carousel-size" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner carousel-inner-materno carousel-inner-ninez" role="listbox" id="ninez-cont">
+                      <div class="item active">
+                          <div class="pdf-prev" ng-repeat="item_ninez in ninez_carrusel_items_active">
+                                <div style="background-image:url({{item_ninez.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_ninez.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_ninez.Name}}</p>
+                          </div>
+                        </div>
+
+                        <div class="item" ng-repeat="items_ninez_group in ninez_carrusel_items">
+                          <div class="pdf-prev" ng-repeat="item_ninez in items_ninez_group">
+                                <div style="background-image:url({{item_ninez.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_ninez.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_ninez.Name}}</p>
+                          </div>
+                        </div>
+                  </div>
+                  <!-- Wrapper for slides end -->
+                  <!-- Controls -->
+                  <div>
+                    <a id="next_btn5" class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next" onclick="return false;">
+                    <img src="images/flecha.png" width="26px" height="26px" class="flecha-carousel">
+                    <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <!-- Controls end -->
+              </div><!-- #carousel-example-generic3 -->
+            </div><!-- contenedor-pdfs -->
+            <div id="chevron-right" class="chevron-pdf-list"></div>
+          </div><!-- subseccion -->
+        </div>
+      </section>
+
+      <!-- INFECCIOSAS -->
+      <section id="section-infecciosas" class="container">
+        <div class="container-fluid row">
+          <div class="subseccion">
+            <a href="#/seccion-catalogo/infecciosas">
+              <div id="nom_infecciosas" class="nombre-seccion">
+                <div class="center-vert">
+                  <img src="images/infecciosas.png">
+                  <p>Enfermedades Infecciosas Frecuentes</p>
+                </div>
+              </div>
+            </a>
+            <div class="contenedor-pdfs">
+              <div id="carousel-example-generic4" data-interval="false" class="carousel slide carousel-size" data-ride="carousel">
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner carousel-inner-materno carousel-inner-infecciosas" role="listbox" id="infecciosas-cont">
+                      <div class="item active">
+                          <div class="pdf-prev" ng-repeat="item_infecciosas in infecciosas_carrusel_items_active">
+                                <div style="background-image:url({{item_infecciosas.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_infecciosas.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_infecciosas.Name}}</p>
+                          </div>
+                        </div>
+
+                        <div class="item" ng-repeat="items_infecciosas_group in infecciosas_carrusel_items">
+                          <div class="pdf-prev" ng-repeat="item_infecciosas in items_infecciosas_group">
+                                <div style="background-image:url({{item_infecciosas.MediaObject[0].PDFMediaObject.URL}})" class="img-pdf-prev"></div>
+                                <a href="#/vista-pdf/{{item_infecciosas.ID}}">
+                                      <button class="btn btn-warning btn-consulta-pdf">Consultar</button>
+                                </a>
+                                <p class="pdf-para">{{item_infecciosas.Name}}</p>
+                          </div>
+                        </div>
+                  </div>
+                  <!-- Wrapper for slides end -->
+                  <!-- Controls -->
+                  <div>
+                    <a id="next_btn5" class="right carousel-control" href="#carousel-example-generic4" role="button" data-slide="next" onclick="return false;">
+                    <img src="images/flecha.png" width="26px" height="26px" class="flecha-carousel">
+                    <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <!-- Controls end -->
+              </div><!-- #carousel-example-generic4 -->
+            </div><!-- contenedor-pdfs -->
+            <div id="chevron-right" class="chevron-pdf-list"></div>
+          </div><!-- subseccion -->
+        </div>
+      </section>
+
+</div>

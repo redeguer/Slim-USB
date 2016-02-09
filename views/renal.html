@@ -1,0 +1,85 @@
+		<section id="renal-calculator" class="container">
+			<div class="row container-fluid">
+				<div class="col-md-12">
+					<div class="calculator-title"> Calculadora de Función Renal</div>
+				</div>
+				<div class="col-md-5">
+					<div id="renal-controls" class="calc-controls-container">
+						<div class="calc-control-item">
+							<label class="calc-item-name alignCheckAttr">* Sexo:</label>
+							<div class="wrapper-radio-button alignCheckAttr">
+								<input type="radio" id="male" class="radio-button radio-button-calorica lookLkCheckbx" checked name="gender" ng-model="gender" ng-change="change()" value="1" />
+								<label class="label-radio-button" for="male">Masculino</label>
+							</div>
+
+							<div class="wrapper-radio-button">
+								<input type="radio" id="female" class="radio-button radio-button-calorica lookLkCheckbx" name="gender" ng-model="gender" ng-change="change()" value="2" />
+								<label class="label-radio-button" for="female">Femenino</label>
+							</div>
+						</div>
+
+            <!-- EDAD -->
+            <div class="calc-control-item">
+              <p>Edad<input type="number" inputs-slider id="caloric-input-age" class="inputs-slider-range" id-nameslider="slider-ages" ng-model="age"  ng-change="change()" min="0" max="100" value="0" /> (años)</p>
+              <div sliders-range class="sliders-ranges slider-light-dark-red" id-input="caloric-input-age" ng-mouseup="ng-change()" id="slider-ages" my-scope="age" min-range=0 max-range=100 step-range=1 value-range=0></div>
+              <div class="calc-drag-limits">
+                <span class="calc-limit-left">0 años</span>
+                <span class="calc-limit-right">99 años</span>
+              </div>
+              <p class="error-input" id="error_age"></p>
+            </div>
+
+
+            <!-- PESO -->
+            <div class="calc-control-item">
+              <p>Peso<input type="number" inputs-slider id="caloric-input-weight" class="inputs-slider-range" id-nameslider="slider-weight" ng-model="weight"  ng-change="change()" min="0" max="150" value="0" /> (Kg)</p>
+              <div sliders-range class="sliders-ranges slider-medium-dark-red" id-input="caloric-input-weight" ng-mouseup="ng-change()" id="slider-weight" my-scope="weight" min-range=0 max-range=150 step-range=1 value-range=0></div>
+              <div class="calc-drag-limits">
+                <span class="calc-limit-left">0 Kg</span>
+                <span class="calc-limit-right">150 kg</span>
+              </div>
+              <p class="error-input" id="error_weight"></p>
+            </div>
+
+
+						<div class="calc-control-item">
+							<p>* Creatinina <span class="calc-info-field" id="cre-pop-over">(?) </span>
+								<input type="number" class="calc-input-value" id="renal-input-creatinine" class="inputs-slider-range" ng-model="creatinine" ng-change="change()" min="0" max="3" step=".1">(mg/dl)</p>
+							<div id="pop-creatinine" class="info-popup">
+                            	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+              <div sliders-range class="sliders-ranges slider-dark-red" id-input="caloric-input-creatinine" ng-mouseup="ng-change()" id="slider-creatinine" my-scope="creatinine" min-range=0 max-range=3 step-range=0.1 value-range=0></div>
+                            <div class="calc-drag-limits">
+                                <span class="calc-limit-left">0 mg/dl</span>
+                                <span class="calc-limit-right">3 mg/dl</span>
+                            </div>
+              <p class="error-input" id="error_creatinine"></p>
+						</div>
+					</div>
+					<button id="btn-reset-renal" class="calc-btn-reset" ng-click="resetForm()">Reiniciar</button>
+					<label>Campos Obligatorios *</label>
+				</div>
+				<div class="col-md-6 col-md-offset-1 centered-text {{class_color_elements}}">
+                    <div  class="calculator-result-title" >Resultado</div>
+                    <div id="renal-text-res" class="calculator-subtitle">
+                    	{{text}} <span class="change-color">{{estadio}}</span>
+                    </div>
+                    <div id="renal-animation-container">
+                    	<div id="renal-circle-frame"></div>
+                    	<div id="calc-renal-image"></div>
+                      <div id="ocean"></div>
+
+                    </div>
+                    <div id="calc-renal-values">
+                        <p class="bold-text">Su Depuracion de Creatinina es:</p>
+                        <h3 id="creatinine-value" class="bold-text change-color">{{tfg}} ml/min</h3>
+                        <div class="grey-line-thin"></div>
+                    </div>
+                    <div class="calc-explanation">
+                    	<p>La tasa de Filtración Glomerular (TFG) (estimada con el DCr) te dice que tanto está funcionando el riñon. Si la enfermedad en el riñón progresa, la TFG disminuye.</p>
+                    	<p>Resultados con base en la fórmula <span class="bold-text">Crockroft-Gault</span></p>
+                    </div>
+
+				</div>
+			</div>
+		</section>

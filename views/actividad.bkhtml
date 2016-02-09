@@ -1,0 +1,161 @@
+<div class="fluid-container main-top-container">
+	
+		<section id="activity-calculator" class="container">
+			<div class="row container-fluid">
+					<div class="col-md-12">
+						<div class="calculator-title"> Calculadora de Actividad Física</div>
+					</div>
+					<div class="col-md-7">
+						<div id="activity-controls" class="calc-controls-container">
+							<div class="calc-question-item">
+								<div class="activity-question">¿Alguna vez el médico le ha indicado que usted tiene un problema en el corazón, y que solamente puede llevar a cabo actividades físicas bajo la autorización de un médico?</div>
+								<div class="square-container1">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g1y" group="g1" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g1n" groupñ="g1" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿Sufre dolores frecuentes en el pecho cuando realiza algún tipo de actividad física?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g2y" group="g2" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g2n" group="g2" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿En el último mes, le ha dolido el pecho cuando no estaba haciendo actividad física?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g3y" group="g3" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g3n" group="g3" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿Con frecuencia pierde el equilibrio debido a mareos, o alguna vez ha perdido el conocimiento?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g4y" group="g4" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g4n" group="g4" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿Tiene problema en los huesos o articulaciones (por ejemplo, en la espalda, rodillas o cadera) que pudiera agravarse al aumentar la actividad física?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g5y" group="g5" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g5n" group="g5" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿Al presente, le receta su médico medicamentos (por ejemplo, pastillas de agua) para la presión arterial o problemas con el corazón?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g6y" group="g6" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g6n" group="g6" value="0"></div>
+								</div>
+							</div>
+							<div class="calc-question-item">
+								<div class="activity-question">¿Existe alguna otra razón por la cuál no debería participar en un programa de actividad física?</div>
+								<div class="square-container">
+									<label class="calc-label-square">Si</label><div class="calc-square-sel" id="g7y" group="g7" value="1"></div>
+									<label class="calc-label-square">No</label>
+									<div class="calc-square-sel" id="g7n" group="g7" value="0"></div>
+								</div>
+							</div>
+						</div>
+						<button id="btn-reset-activity" class="calc-btn-reset">Reiniciar</button>
+						<button id="btn-send-activity" class="calc-btn-send">Enviar</button>
+						<label>Campos Obligatorios *</label>
+					</div>
+					<div class="col-md-4 centered-text">
+                        <div  class="activity-tit-image bold-text" >¡Actívate!</div>
+                    	<div class="calc-activity-image"></div>
+                    </div>
+			</div>
+		</section>
+		<section id="activity-calculator-b" class="container">
+			<div class="container-fluid">
+				<div id="activity-risk" class="activity-tit-image">¡Estás listo para hacer ejercicio!</div>
+				<div class="header-activity-b"></div><!--Para la imagen-->
+				<p class="centered-text">Al iniciar tu plan mensual siempre realiza las tres fases de actividad física con la combinación de ejercicio de fase indicada por tu médico.</p>
+				<div class="personal-recipe">
+					<div class="title-recipe">
+						<div id="arr-per-info"></div>
+						<span id="text-title-rec">RECETA PERSONAL (Plan de actividad física mensual)</span>
+						<span id="recipe-date">Fecha de inicio: 9/06/2015</span>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-6">
+								<label class="label-recipe">Peso(kg):</label>
+								<input type="text" id="activity-weight">
+								<label class="label-recipe">Edad:</label>
+								<input type="text" id="activity-age">
+								<label class="bold-text">Sexo:</label><br>
+								<label class="calc-label-square" >Masculino</label>
+								<div class="calc-square-sel" id="activity-male" group="gender"></div>
+								<label class="calc-label-square">Femenino</label>
+								<div class="calc-square-sel" id="activity-female" group="gender"></div><br><br>
+								<label class="bold-text">¿Fuma?:</label>
+								<label class="calc-label-square">Si</label>
+								<div class="calc-square-sel" id="activity-smkY" group="smoke"></div>
+								<label class="calc-label-square">No</label>
+								<div class="calc-square-sel" id="activity-smkN" group="smoke"></div>
+							</div>
+							<div class="col-md-6">
+								<label class="label-recipe">Estatura(cm):</label>
+								<input type="text" id="activity-heigth">
+								<label class="label-recipe">Presión Arterial(mmHG)</label>
+								<input type="text" id="activity-press1" class="acti-inp-half"> /
+								<input type="text" id="activity-press2" class="acti-inp-half"> 
+								<label class="label-recipe">Circunferencia de cintura (cm)</label>
+								<input type="text" id="activity-waist">
+							</div>
+							<div class="clearfix" ></div>
+							<div class="col-md-12" style="margin-top:20px;">
+								<label>Alguna limitación para realizar actividad física:</label>
+								<input type="text" id="activity-limitation">
+								<label class="label-recipe">Intensidad</label>
+							</div>
+							<div class="col-md-4 centered-text">
+								<img src="img/icono-baja.png"><br>
+								<div id="low-activity" class="calc-square-sel less-margin" group="intensity" disabled></div>
+								<label class="label-recipe">Baja</label>
+							</div>
+							<div class="col-md-4 centered-text">
+								<img src="img/icono-media.png"><br>
+								<div id="medium-activity" class="calc-square-sel less-margin" id="" group="intensity" disabled></div>
+								<label class="label-recipe">Media</label>
+							</div>
+							<div class="col-md-4 centered-text">
+								<img src="img/icono-alta.png"><br>
+								<div id="high-activity" class="calc-square-sel less-margin" group="intensity" disabled></div>
+								<label class="label-recipe">Alta</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 centered-text">
+						<p class="bold-text">IMC (Ìndice de Masa Corporal)</p>
+						<h1 id="activ-imc-res">XX.XX kg/m<sup>2</sup></h1>
+						<div class="grey-line-2p"></div>
+						<p class="bold-text">FCR (Frecuencia Cardiaca Recomendad)</p>
+						<h1 id="activ-FCR">XX lpm</h1>
+						<div class="grey-line-2p"></div>
+						<p class="bold-text">FMC (Frecuencia Máxima Cardiaca)=(180-edad)</p>
+						<h1 id="activ-FMC">XXX lpm</h1>
+						<div class="grey-line-2p"></div>
+						<button id="btn-ret-que" class="btn-return-quest">Regresar</button>
+						<button id="btn-gen-plan" class="btn-generate-plan">Generar plan</button>
+					</div>
+					<div class="clearfix"></div>
+					<div class="title-recipe" style="margin-top:10px"></div>
+				</div>
+				<div id="activity-plan" class="col-md-12">
+					
+				</div>
+			</div>
+		</section>
+		
+		
+</div>

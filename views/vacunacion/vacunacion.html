@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://portafoliodigitalsalud.org/vacunacion.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Portafolio Digital</title>
+		<link rel="stylesheet" type="text/css" href="./vacunacion_files/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./vacunacion_files/fonts.css">
+		<link rel="stylesheet" type="text/css" href="./vacunacion_files/main.css">
+		<link rel="stylesheet" type="text/css" href="./vacunacion_files/calculator.css">
+		<link type="text/css" rel="stylesheet" href="./vacunacion_files/popModal.css">
+		<script async="" src="./vacunacion_files/analytics.js"></script><script src="./vacunacion_files/jquery-1.11.2.min.js"></script>		
+		<script src="./vacunacion_files/bootstrap.min.js"></script>
+		<script src="./vacunacion_files/scrollIt.min.js"></script>
+		<script src="./vacunacion_files/main.js"></script>
+		<script src="./vacunacion_files/calculator.js"></script>
+	</head>
+	<body cz-shortcut-listen="true">
+		<section id="vaccination" class="container">
+			<div class="row container-fluid">
+				<div class="col-md-12">
+					<div class="vacc-popup">
+						<div class="vacc-top1-pop"></div>
+						<div class="vacc-top2-pop"></div>
+						<div class="vacc-txt-pop">
+							<h4>Vacuna</h4>
+							<p>Texto deve</p>
+						</div>
+						<div class="vacc-arrow-pop"></div>
+					</div>
+					<div class="vaccionation-title">Esquemas de vacunación</div>
+					<div class="vaccination-input">
+						<div class="vacc-input-txt">1. Consultar el esquema de vacunación de:</div>
+						<button id="vacc-btn-kids" class="vacc-input-btn">Niños y recién nacidos</button>
+						<button id="vacc-btn-teen" class="vacc-input-btn">Adolescentes y adultos</button>
+					</div>
+					<div id="vacc-vac-container" class="vaccination-input">
+						<div class="vacc-input-txt">2.- Tipo de búsqueda:</div>
+						<div class="vacc-select" id="vacc-select-type">
+							<div class="vacc-selected">
+								<div class="vacc-op-circle" style="background-color:"></div>
+								<div class="vacc-option-txt">Todas las vacunas</div>
+							</div>
+							<div class="vacc-option" value="0">
+								<div class="vacc-op-circle" style="background-color:"></div>
+								<div class="vacc-option-txt">Todas las vacunas</div>
+							</div>
+							<div class="vacc-option" value="1">
+								<div class="vacc-op-circle" style="background-color:#fde000"></div>
+								<div class="vacc-option-txt">BCG</div>
+							</div>
+							<div class="vacc-option" value="2">
+								<div class="vacc-op-circle" style="background-color:#37a9df"></div>
+								<div class="vacc-option-txt">Hepatitis B</div>
+							</div>
+							<div class="vacc-option" value="3">
+								<div class="vacc-op-circle" style="background-color:#f9af12"></div>
+								<div class="vacc-option-txt">Poliomielitis inactiva</div>
+							</div>
+							<div class="vacc-option" value="4">
+								<div class="vacc-op-circle" style="background-color:#8e2492"></div>
+								<div class="vacc-option-txt">H. Influenzae b</div>
+							</div>
+							<div class="vacc-option" value="5">
+								<div class="vacc-op-circle" style="background-color:#8fc800"></div>
+								<div class="vacc-option-txt">Dpat</div>
+							</div>
+							<div class="vacc-option" value="6">
+								<div class="vacc-op-circle" style="background:url(img/circle-rota.png)"></div>
+								<div class="vacc-option-txt">Rotavirus</div>
+							</div>
+							<div class="vacc-option" value="7">
+								<div class="vacc-op-circle" style="background-color:#e06f07"></div>
+								<div class="vacc-option-txt">Neumococo conjugada</div>
+							</div>
+							<div class="vacc-option" value="8">
+								<div class="vacc-op-circle" style="background-color:#066196"></div>
+								<div class="vacc-option-txt">Neumococo Polisacárida</div>
+							</div>
+							<div class="vacc-option" value="9">
+								<div class="vacc-op-circle" style="background-color:#049107"></div>
+								<div class="vacc-option-txt">Influenza Virus</div>
+							</div>
+							<div class="vacc-option" value="10">
+								<div class="vacc-op-circle" style="background-color:#eb05c0"></div>
+								<div class="vacc-option-txt">Hepatitis A</div>
+							</div>
+							<div class="vacc-option" value="11">
+								<div class="vacc-op-circle" style="background-color:#26eae6"></div>
+								<div class="vacc-option-txt">Sarampión, Rubéola, Parotiditis</div>
+							</div>
+							<div class="vacc-option" value="12">
+								<div class="vacc-op-circle" style="background-color:#d91b5b"></div>
+								<div class="vacc-option-txt">Varicela</div>
+							</div>
+							<div class="vacc-option" value="13">
+								<div class="vacc-square-p" style="background:url(img/circle-papic.png)"></div>
+								<div class="vacc-option-txt">Virus de papiloma humano</div>
+							</div>
+							<div class="vacc-option" value="14">
+								<div class="vacc-op-circle" style="background-color:#ed7dab"></div>
+								<div class="vacc-option-txt">dpaT</div>
+							</div>
+							<div class="vacc-option" value="15">
+								<div class="vacc-op-circle" style="background-color:#6b6b6b"></div>
+								<div class="vacc-option-txt">Meningicoco ACYW</div>
+							</div>
+						</div>
+						<!--ALGO-->
+						<div class="vacc-select" id="vacc-select-type2">
+							<div class="vacc-selected">
+								<div class="vacc-op-circle"></div>
+								<div class="vacc-option-txt">Todas las vacunas</div>
+							</div>
+							<div class="vacc-ad-option" value="0">
+								<div class="vacc-op-circle"></div>
+								<div class="vacc-option-txt">Todas las vacunas</div>
+							</div>
+							<div class="vacc-ad-option" value="1">
+								<div class="vacc-op-circle" style="background-color:#8fc800"></div>
+								<div class="vacc-option-txt">Tétanos, Difteria, y Tos Ferina</div>
+							</div>
+							<div class="vacc-ad-option" value="2">
+								<div class="vacc-square-p" style="background:url(img/circle-papic.png)"></div>
+								<div class="vacc-option-txt">Papiloma Humano</div>
+							</div>
+							<div class="vacc-ad-option" value="3">
+								<div class="vacc-op-circle" style="background-color:#26eae6"></div>
+								<div class="vacc-option-txt">Rubéola, Paperas, y Sarampión</div>
+							</div>
+							<div class="vacc-ad-option" value="4">
+								<div class="vacc-op-circle" style="background-color:#d91b5b"></div>
+								<div class="vacc-option-txt">Varicela</div>
+							</div>
+							<div class="vacc-ad-option" value="5">
+								<div class="vacc-op-circle" style="background-color:#049107"></div>
+								<div class="vacc-option-txt">Influenza</div>
+							</div>
+							<div class="vacc-ad-option" value="6">
+								<div class="vacc-op-circle" style="background-color:#066196"></div>
+								<div class="vacc-option-txt">Neumococo (Polisacárido)</div>
+							</div>
+							<div class="vacc-ad-option" value="7">
+								<div class="vacc-op-circle" style="background-color:#eb05c0"></div>
+								<div class="vacc-option-txt">Hepatitis A</div>
+							</div>
+							<div class="vacc-ad-option" value="8">
+								<div class="vacc-op-circle" style="background-color:#37a9df"></div>
+								<div class="vacc-option-txt">Hepatitis B</div>
+							</div>
+							<div class="vacc-ad-option" value="9">
+								<div class="vacc-op-circle" style="background-color:#6b6b6b"></div>
+								<div class="vacc-option-txt">Meningococo</div>
+							</div>
+						</div>
+						<!--OTRO-->
+					</div>
+					<div id="vacc-age-container" class="vaccination-input">
+						<div class="vacc-select" id="vacc-select-age">
+							<div class="vacc-selected">
+								<div class="vacc-option-txt">Todas las edades</div>
+							</div>
+							<div class="vacc-option" value="0">
+								<div class="vacc-option-txt">Todas las edades</div>
+							</div>
+							<div class="vacc-option" value="1">
+								<div class="vacc-option-txt">Nacimiento</div>
+							</div>
+							<div class="vacc-option" value="2">
+								<div class="vacc-option-txt">2 meses</div>
+							</div>
+							<div class="vacc-option" value="3">
+								<div class="vacc-option-txt">4 meses</div>
+							</div>
+							<div class="vacc-option" value="4">
+								<div class="vacc-option-txt">6 meses</div>
+							</div>
+							<div class="vacc-option" value="5">
+								<div class="vacc-option-txt">7 meses</div>
+							</div>
+							<div class="vacc-option" value="6">
+								<div class="vacc-option-txt">9 meses</div>
+							</div>
+							<div class="vacc-option" value="7">
+								<div class="vacc-option-txt">12 meses</div>
+							</div>
+							<div class="vacc-option" value="8">
+								<div class="vacc-option-txt">15 meses</div>
+							</div>
+							<div class="vacc-option" value="9">
+								<div class="vacc-option-txt">18 meses</div>
+							</div>
+							<div class="vacc-option" value="10">
+								<div class="vacc-option-txt">2 años</div>
+							</div>
+							<div class="vacc-option" value="11">
+								<div class="vacc-option-txt">4 a 6 años</div>
+							</div>
+							<div class="vacc-option" value="12">
+								<div class="vacc-option-txt">9 a 10 años</div>
+							</div>
+							<div class="vacc-option" value="13">
+								<div class="vacc-option-txt">11 a 12 años</div>
+							</div>
+							<div class="vacc-option" value="14">
+								<div class="vacc-option-txt">Anual</div>
+							</div>
+						</div>
+					</div>
+					<div id="vacc-table-cont">
+						<table id="kids-vacc-table" style="border-bottom : 5px solid #153750;">
+							<tbody><tr>
+								<th style="border-right : none !important;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">VACUNA</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">Nacimiento</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">2 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">4 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">6 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">7 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">9 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">12 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">15 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">18 meses</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">2 años</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">4 a 6 años</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">9 a 10 años</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">11 a 12 años</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">Anual</th>
+							</tr>
+							<tr id="kr1">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 160px !important;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="1">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">BCG</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#fde000">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#fde000"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr2">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="2">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Hepatitis B</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#37a9df">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#37a9df"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#37a9df"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#37a9df"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr3">
+								<td class="first-col" style="background-color : #f4f4f4;max-height: 40px !important;width: 140px !iumportant;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="3">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Poliomielitis inactiva</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#f9af12">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#f9af12"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#f9af12"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#f9af12"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#f9af12"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#f9af12"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr4">
+								<td class="first-col" style="background-color : #e7e7e7;max-height: 40px !important;width: 140px !important;border-top: none;border-bottom: 1px solid #fff;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 10px;font-size: 12px; cursor: pointer;" value="4">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">H. Influenzae b</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#8e2492">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8e2492"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8e2492"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8e2492"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8e2492"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr5">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="5">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">DPat</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#8fc800">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr6">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="6">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Rotavirus</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;">
+										<div style="height : 20px;width  : 5px; background-color:#232162"></div>
+										<div style="height : 20px;width  : 5px; background-color:#ff001e"></div>
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="background-color:#232162;width: 14px;height: 7px;border-radius: 14px 14px 0 0;-moz-border-radius: 14px 14px 0 0;-webkit-border-radius : 14px 14px 0 0;margin-left: 41%;"></div><div style="width : 14px;height : 7px;border-radius: 0 0 14px 14px;-moz-border-radius: 0 0 14px 14px;-webkit-border-radius : 0 0 14px 14px;background-color: red;margin-left: 41%;"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="background-color:#232162;width: 14px;height: 7px;border-radius: 14px 14px 0 0;-moz-border-radius: 14px 14px 0 0;-webkit-border-radius : 14px 14px 0 0;margin-left: 41%;"></div><div style="width : 14px;height : 7px;border-radius: 0 0 14px 14px;-moz-border-radius: 0 0 14px 14px;-webkit-border-radius : 0 0 14px 14px;background-color: red;margin-left: 41%;"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="width : 14px;height : 7px;border-radius: 0 0 14px 14px;-moz-border-radius: 0 0 14px 14px;-webkit-border-radius : 0 0 14px 14px;background-color: red;margin-left: 41%;"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr7">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="7">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Neumococo conjugada</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#e06f07">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#e06f07"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#e06f07"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#e06f07"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#e06f07"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr8">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="8">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Neumococo Polisacárida</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#066196">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#066196"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr9">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="9">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Influeza Virus</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#049107">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#049107"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#049107"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#049107"></div></td>
+							</tr>
+							<tr id="kr10">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="10">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Hepatitis A</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#eb05c0">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#eb05c0"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#eb05c0"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr11">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="11">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Sarampión, Rubéola, Parotiditis</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#26eae6">
+									</div> 
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#26eae6"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#26eae6"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr12">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="12">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Varicela</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#d91b5b">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#d91b5b"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#d91b5b"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr13">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="13">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Virus de papiloma humano</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#764b29">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 53%;margin-left: 48%;margin-top: -10px; background-color:#8E612E;"></div><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 64%;margin-top: 4px; background-color:#8E612E;margin-left:35%;"></div><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 7%;margin-top: 4px; background-color:#8E612E;margin-left:60%;"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+							<tr id="kr14">
+								<td class="first-col" style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="14">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">dpaT</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#ed7dab">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#ed7dab"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;"></td>
+							</tr>
+							<tr id="kr15">
+								<td class="first-col" style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="15">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Meningococo ACYW</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#6b6b6b">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#6b6b6b"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 50%;margin-left: 41%;margin-top: -7px; background-color:#6b6b6b"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;"></td>
+							</tr>
+						</tbody></table>
+						<!--
+							Tabla de vacunación de adultos
+						-->
+						<table id="adult-vacc-table" class="col-md-12" style="border-bottom : 5px solid #153750;">
+							<tbody><tr>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;border-right : none !important;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;">VACUNA</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">De 19 años en adelante</th>
+								<th style="background-color : #153750;height: 35px;color : #fff;padding: 5px;border-left: 2px solid #1d5880;text-align: center;font-family: &#39;helveticaneuelt_stdregular&#39;;">Dosis</th>
+							</tr>
+							<tr id="gr1">
+								<td style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="1">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Tetanos, Difeteria y Tos Ferina (TD/TDAP)</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#8fc800"></div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#8fc800"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									Una dosis de Tdp y sustituida por Td cada 10 años
+								</td>
+							</tr>
+							<tr id="gr2">
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="2">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Papiloma Humano</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#764b29">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 53%;margin-left: 48%;margin-top: -10px; background-color:#8E612E;"></div><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 64%;margin-top: 4px; background-color:#8E612E;margin-left:42%;"></div><div style="position: relative; width: 8px;height: 8px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;top: 7%;margin-top: 4px; background-color:#8E612E;margin-left:53%;"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									2 dosis mujeres <br>(la segunda después 6 meses)
+								</td>
+							</tr>
+							<tr id="gr3">
+								<td style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="3">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Rubéola, paperas y Sarampión (MMR)</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#26eae6">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#26eae6"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									dosis única
+								</td>
+							</tr>
+							<tr id="gr4">
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="4">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Varicela</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#d91b5b">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#d91b5b"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									dosis única o 2 dosis <br>(depende del laboratorio)
+								</td>
+							</tr>
+							<tr id="gr5">
+								<td style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="5">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Influenza</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#049107">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#049107"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									dosis única
+								</td>
+							</tr>
+							<tr id="gr6">
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="7">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Neumococo (Polisacárido)</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#066196">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#066196"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									2 dosis <br>(la segunda 5 años después)
+								</td>
+							</tr>
+							<tr id="gr7">
+								<td style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="8">
+									<span style="float: left;max-width  : 120px;margin-top : 4px;">Hepatitis A</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#eb05c0">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#eb05c0"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									dosis única
+								</td>
+							</tr>
+							<tr id="gr8">
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="9">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Hepatitis B</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#37a9df">
+									</div>
+								</td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#37a9df"></div></td>
+								<td style="background-color : #e7e7e7;height: 40px;width: 50px;border-top: none;border-bottom: 1px solid #fff;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									2 dosis <br>(la segunda después de un mes)
+								</td>
+							</tr>
+							<tr id="gr9">
+								<td style="background-color : #f4f4f4;height: 40px;width: 140px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width : 140px;max-width: 140px !important;border: none !important; text-align: left !important;padding-left: 20px;font-size: 12px; cursor: pointer;" value="10">
+									<span style="float: left;max-width: 120px;margin-top: 13px;">Meningococo</span>
+									<div style="float: right;height: 40px;width: 5px;margin-left: 2px;background-color:#6b6b6b">
+									</div>
+								</td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;border-left : none !important;"><div style="position: relative; width: 14px;height: 14px;-webkit-border-radius : 50%;-moz-border-radius: 50%;border-radius: 50%;background-color: #aaa;top: 50%;left: 50%;margin-left: -7px;margin-top: -7px; background-color:#6b6b6b"></div></td>
+								<td style="background-color : #f4f4f4;height: 40px;width: 50px;  border-left: 2px solid #fff;border-bottom: 1px solid #fff; border-top: none;width: 420px !important;text-align: center;padding-left: 3px;padding-right: 3px;">
+									Dosis única
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<button id="share_vacc" class="btn-share-calc" data-scroll-goto="0">Compartir</button>
+				<button id="share_vacc_teen" class="btn-share-calc" data-scroll-goto="0">Compartir</button>
+			</div>
+		</section>
+	    <div id="cuadro-registro" style="margin-top: 10px !important;">
+	      <img src="./vacunacion_files/cerrar.png" id="btn-cerrar-registro">
+	      <p class="titulo-registro-index">Registro</p>
+	          <p class="seccion-registro-index" style="margin-top:-20px">
+	            Nombre
+	          </p><br>
+	          <input type="text" name="email" id="email" class="form-registro-index"><br>
+	          <p class="seccion-registro-index">
+	            E-mail
+	          </p><br>
+	          <input type="text" name="email" id="email" class="form-registro-index"><br>
+	          <p class="seccion-registro-index">
+	            Contraseña
+	          </p><br>
+	          <input type="password" name="password" id="password" class="form-registro-index"><br>
+	          <p class="seccion-registro-index">
+	            Confirma contraseña
+	          </p><br>
+	          <input type="password" name="password" id="password" class="form-registro-index"><br>
+	          <img src="./vacunacion_files/cancelar.png" class="btn-registro" id="cancela" style="margin-left: 10px">
+	          <img src="./vacunacion_files/aceptar.png" class="btn-registro">
+	    </div>
+	    <div id="send-result-w">
+        	<div class="top-send-res">Compartir Resultados</div>
+        	<div class="form-result-w">
+        		<p class="centered-text">Envía los resultados para recordar a tus pacientes como mejorar sus hábitos y estilo de vida.</p>
+        		<form id="form-send-vacc">
+        			<div class="form-group">
+					    <label for="inputNombreVac">Nombre</label>
+					    <input type="text" class="form-control" id="inputNombreVac" placeholder="Nombre">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputEmailVac">Correo</label>
+					    <input type="email" class="form-control" id="inputEmailVac" placeholder="Email">
+				  	</div>
+				  	<button type="submit" id="btn-submit-vacc-kids" class="btn btn-primary">Enviar</button>
+				  	<button type="button" id="calc-cancel-sub" class="btn btn-default">Cancelar</button>
+        		</form>
+        	</div>
+        	<div class="foot-send-res"></div>
+        </div>
+        <div id="send-result-w-teen">
+        	<div class="top-send-res">Compartir Resultados</div>
+        	<div class="form-result-w">
+        		<p class="centered-text">Envía los resultados para recordar a tus pacientes como mejorar sus hábitos y estilo de vida.</p>
+        		<form id="form-send-vacc-teen">
+        			<div class="form-group">
+					    <label for="inputNombreVac">Nombre</label>
+					    <input type="text" class="form-control" id="inputNombreVac-teen" placeholder="Nombre">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputEmailVac">Correo</label>
+					    <input type="email" class="form-control" id="inputEmailVac-teen" placeholder="Email">
+				  	</div>
+				  	<button type="submit" id="btn-submit-vacc-kids-teen" class="btn btn-primary">Enviar</button>
+				  	<button type="button" id="calc-cancel-sub-teen" class="btn btn-default">Cancelar</button>
+        		</form>
+        	</div>
+        	<div class="foot-send-res"></div>
+        </div>
+		
+		<div id="prueba"></div>
+	
+		
+
+		
+
+		<script src="./vacunacion_files/popModal.js"></script>
+		
+	
+	
+
+</div></body></html>

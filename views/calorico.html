@@ -1,0 +1,127 @@
+
+		<section id="caloric-calculator" class="container desktop-container">
+			<div class="row container-fluid">
+					<div class="col-md-12">
+						<div class="calculator-title">Calculadora de Gasto Calórico</div>
+					</div>
+					<div id="caloric-parameters" class="col-md-5">
+						<div id="caloric-controls" class="calc-controls-container">
+							<div class="calc-control-item">
+								<label class="calc-item-name alignCheckAttr">Sexo</label>
+
+                <!-- GENERO -->
+                <div class="wrapper-radio-button alignCheckAttr">
+                  <label class="label-radio-button" for="male">Masculino</label>
+                  <input type="radio" id="male" class="radio-button radio-button-gender-calorica lookLkCheckbx" name="gender" ng-model="gender" ng-change="change()" value="1" />
+                </div>
+
+                <div class="wrapper-radio-button">
+                  <label class="label-radio-button" for="female">Femenino</label>
+                  <input type="radio" id="female" class="radio-button radio-button-gender-calorica lookLkCheckbx" name="gender" ng-model="gender" ng-change="change()" value="2" />
+                </div>
+			</div>
+
+              <!-- EDAD -->
+              <div class="calc-control-item">
+                <p>Edad<input type="number" class="inputs-slider-range" inputs-slider id="caloric-input-age" id-nameslider="slider-ages" ng-model="age"  ng-change="change()" min="0" max="99" value="0" /> (años)</p>
+
+                <div sliders-range class="sliders-ranges slider-red" id-input="caloric-input-age" ng-mouseup="ng-change()" id="slider-ages" my-scope="age" min-range=0 max-range=99 step-range=1 value-range=0></div>
+                <div class="calc-drag-limits">
+                	<span class="calc-limit-left">0 años</span>
+                 	<span class="calc-limit-right">99 años</span>
+                </div>
+                <p class="error-input" id="error_age"></p>
+              </div>
+
+              <!-- PESO -->
+              <div class="calc-control-item">
+                <p>Peso<input type="number" class="inputs-slider-range" inputs-slider id="caloric-input-weight" id-nameslider="slider-weight" ng-model="weight"  ng-change="change()" min="0" max="150" value="0" /> (Kg)</p>
+                <div sliders-range class="sliders-ranges slider-medium-red" id-input="caloric-input-weight" ng-mouseup="ng-change()" id="slider-weight" my-scope="weight" min-range=0 max-range=150 step-range=1 value-range=0></div>
+                <div class="calc-drag-limits">
+                  <span class="calc-limit-left">0 Kg</span>
+                  <span class="calc-limit-right">150 kg</span>
+                </div>
+                <p class="error-input" id="error_weight"></p>
+              </div>
+
+              <!-- ESTATURA -->
+              <div class="calc-control-item">
+                <p>Estatura<input type="number" class="inputs-slider-range" inputs-slider id="caloric-input-height" id-nameslider="slider-height" ng-model="height"  ng-change="change()" min="0" max="210" value="0" /> (cm)</p>
+                <div sliders-range class="sliders-ranges slider-light-red" id-input="caloric-input-height" ng-mouseup="ng-change()" id="slider-height" my-scope="height" min-range=0 max-range=210 step-range=1 value-range=0></div>
+                <div class="calc-drag-limits">
+                  <span class="calc-limit-left">0 cm</span>
+                  <span class="calc-limit-right">210 cm</span>
+                </div>
+                <p class="error-input" id="error_height"></p>
+              </div>
+
+							<div class="calc-control-item">
+								<label class="calc-item-name">Estilo de vida:</label><br>
+
+                <!-- ESTILO DE VIDA -->
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="sedentaria" class="radio-button radio-button-calorica lookLkCheckbx" name="lifestyle" ng-model="lifestyle" ng-change="change()" value="1.2"/>
+									<label class="label-radio-button" for="sedentaria">Sedentaria</label>
+								</div>
+
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="Ligera" class="radio-button radio-button-calorica lookLkCheckbx" name="lifestyle" ng-model="lifestyle" ng-change="change()" value="1.375"/>
+									<label class="label-radio-button" for="Ligera">Ligera</label>
+								</div>
+
+								<div class="wrapper-radio-button">
+									<input type="radio" id="Moderada" class="radio-button radio-button-calorica lookLkCheckbx" name="lifestyle" ng-model="lifestyle" ng-change="change()" value="1.55"/>
+									<label class="label-radio-button" for="Moderada">Moderada</label>
+								</div>
+								<br/>
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="Intensa" class="radio-button radio-button-calorica lookLkCheckbx" name="lifestyle" ng-model="lifestyle" ng-change="change()" value="1.725"/>
+									<label class="label-radio-button" for="Intensa">Intensa</label>
+								</div>
+
+								<div class="wrapper-radio-button alignCheckAttr">
+									<input type="radio" id="MIntensa" class="radio-button radio-button-calorica lookLkCheckbx" name="lifestyle" ng-model="lifestyle" ng-change="change()" value="1.9"/>
+									<label class="label-radio-button" for="MIntensa">Muy Intensa</label>
+								</div>
+
+							</div>
+						</div>
+						<button class="calc-btn-reset" ng-click="resetform()">Reiniciar</button>
+					</div>
+					<div id="caloric-results" class="col-md-6 col-md-offset-1 col-sm-12 centered-text">
+						<!--<div  class="calculator-result-title" >Metabolismo Basal</div>-->
+						<div id="caloric-keep">
+							<p id="caloric-keep-val" >{{caloric_keep}}</p>
+							<p>Calorías para Mantener el Peso</p>
+						</div>
+						<div id="caloric-container" >
+              <div class="wrap-carousel">
+                <ul carousel id="">
+                  <p id="caloric-reduce-val"><li>{{caloric_reduce}}</li></p>
+                  <p id="caloric-reduce-val"><li>{{caloric_reduce}}</li></p>
+                  <p id="caloric-reduce-val"><li>{{caloric_reduce}}</li></p>
+                </ul>
+                
+              </div>
+              <p>Calorías para Adelgazar</p>
+
+							<!--<div id="calorie-unit">Calorías</div>-->		
+
+						</div>
+						<!--<div id="caloric-values">
+							
+							<div class="values-division"></div>
+							<div id="caloric-reduce">
+							<p id="caloric-reduce-val">{{caloric_reduce}}</p>
+							<p>Calorías para Adelgazar</p>
+							</div>
+						</div>-->
+						<div id="caloric-res-exp" class="calc-explanation">
+						<p>El método <span class="bold-text">Harris-Benedict</span> te permite descubrir de una forma mucho mas precisa el número de calorías que deberías consumir diariamente.</p>
+						</div>
+						</div>
+			</div>
+		</section>
+
+
+

@@ -1,0 +1,28 @@
+<div class="container" style="margin-top: 150px;">
+	<div class="row marketing">
+	  <p>
+	    <h4><span>1)</span> ¿Lorem ipsum dolor sit amet?</h4>
+	    <ul>
+	      <li><input type="radio" name="A" ng-model="someData.A.fix_answer" value="Si"> A. Si</li>
+	      <li><input type="radio" name="A" ng-model="someData.A.fix_answer" value="No"> B. No ¿Por qué? 
+	      <input type="text" class="form-control" ng-disabled="someData.A.fix_answer !== 'No'" ng-model="someData.A.answer"></li>
+	  	</ul>
+	  </p>
+
+	  <p>
+	    <h4><span>2)</span> ¿Donec lacinia ex non risus posuere?</h4>
+	    <ul>
+	      <li><input type="radio" name="B" ng-model="someData.B.fix_answer" value="Organización"> A. Si</li>
+	      <li><input type="radio" name="B" ng-model="someData.B.fix_answer" value="Atención"> B. Tal vez</li>
+	      <li><input type="radio" name="B" ng-model="someData.B.fix_answer" value="Otra"> B. No ¿Por qué?
+	      <input type="text" class="form-control" ng-disabled="someData.B.fix_answer !== 'Otra'" ng-model="someData.B.answer"></li>
+	    </ul>
+	  </p>
+
+	  <p style="border-bottom: dotted 1px gray;">&nbsp;</p>
+	  <p class="col-xs-6 col-xs-offset-3">
+	    <button type="button" class="btn btn-primary btn-lg btn-block" ng-disabled="enabledSubmit()" ng-click="submitPoll()">Salvar Datos</button>
+	  </p>
+
+	</div>
+</div>

@@ -1,0 +1,158 @@
+<section id="activity-calculator" class="container">
+<form name="activity-form">
+  <div class="row container-fluid">
+    <div class="col-md-12">
+      <div class="calculator-title"> Calculadora de Actividad Física</div>
+    </div>
+    <div class="col-md-7">
+      <div id="activity-controls" class="calc-controls-container">
+        <div class="calc-question-item" ng-repeat="question in Questions">
+          <div class="activity-question">{{question.text}}</div>
+          <div class="square-container1">
+            <div class="wrapper-radio-button" ng-repeat="answer in question.answers">
+              <input type="radio" id="{{answer.id}}" class="radio-button" ng-model="question.userAnswer" value="{{answer.value}}" />
+              <label class="label-radio-button" for="{{answer.id}}">{{answer.text}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="btn-reset-activity" class="calc-btn-reset" ng-click="resetForm()">Reiniciar</button>
+      <button id="btn-send-activity" class="calc-btn-send" ng-click="submitForm()">Enviar</button>
+      <label>Campos Obligatorios *</label>
+    </div>
+    <div class="col-md-4 centered-text">
+      <div  class="activity-tit-image bold-text" >¡Actívate!</div>
+      <div class="calc-activity-image"></div>
+    </div>
+  </div>
+</form>
+</section>
+<section id="activity-calculator-b" class="container">
+  <div class="container-fluid">
+    <div id="activity-risk" class="activity-tit-image  {{class_risk}}">{{text_risk}}</div>
+    <div class="header-activity-b"></div><!--Para la imagen-->
+    <p class="centered-text">Al iniciar tu plan mensual siempre realiza las tres fases de actividad física con la combinación de ejercicio de fase indicada por tu médico.</p>
+    <div class="personal-recipe">
+      <div class="title-recipe">
+        <div id="arr-per-info"></div>
+        <span id="text-title-rec" ng-click="return_form_receta()">RECETA PERSONAL (Plan de actividad física mensual)</span>
+        <span id="recipe-date">Fecha de inicio: 9/06/2015</span>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <label class="label-recipe">Nombre:</label>
+            <input type="text" id="activity-name">
+            <label class="label-recipe">Peso(kg):</label>
+            <input type="number" id="activity-weight" min="1" max="150" ng-model="weight" ng-change="change()">
+            <label class="label-recipe">Edad:</label>
+            <input type="number" id="activity-age" min="1" max="99" ng-model="age" ng-change="change_age()">
+            <label class="bold-text">Sexo:</label><br>
+
+            <!-- GENERO -->
+            <div class="wrapper-radio-button">
+              <input type="radio" id="male" class="radio-button radio-button-gender-calorica" name="gender" ng-model="gender" ng-change="change()" value="1" />
+              <label class="label-radio-button" for="male">Masculino</label>
+            </div>
+
+            <div class="wrapper-radio-button">
+              <input type="radio" id="female" class="radio-button radio-button-gender-calorica" name="gender" ng-model="gender" ng-change="change()" value="2" />
+              <label class="label-radio-button" for="female">Femenino</label>
+            </div>
+
+            <br><br>
+
+            <!-- FUMADOR -->
+            <div class="wrapper-radio-button">
+              <input type="radio" id="smoker_y" class="radio-button" ng-model="smoker" ng-change="change()" value="1" />
+              <label class="label-radio-button" for="smoker_y">Sí</label>
+            </div>
+            <div class="wrapper-radio-button">
+              <input type="radio" id="smoker_n" class="radio-button" ng-model="smoker" ng-change="change()" value="2" />
+              <label class="label-radio-button" for="smoker_n">No</label>
+            </div>
+
+          </div>
+
+
+          <div class="col-md-6">
+            <label class="label-recipe">Estatura(cm):</label>
+            <input type="number" id="activity-heigth" min="1" max="210" ng-model="height" ng-change="change()">
+
+
+            <label class="label-recipe">Presión Arterial(mmHG)</label>
+            <input type="number" class="acti-inp-half" min="1" max="300" ng-model="press1"> /
+            <input type="number" class="acti-inp-half" min="1" max="200" ng-model="press2">
+
+
+            <label class="label-recipe">Circunferencia de cintura (cm)</label>
+            <input type="number" id="activity-waist" min="1" max="250" ng-model="waist">
+
+
+            <p class="bold-text">FCR (Frecuencia Cardiaca en Reposo)</p>
+            <input type="number" id="activ-FCR" min="1" max="200" ng-model="fcr">
+
+            <!-- <h1 id="activ-FCR">XX lpm</h1> -->
+          </div>
+          <div class="clearfix" ></div>
+          <div class="col-md-12" style="margin-top:20px;">
+            <label>Alguna limitación para realizar actividad física:</label>
+            <input type="text" id="activity-limitation">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 centered-text">
+        <p class="bold-text">IMC (Ìndice de Masa Corporal)</p>
+        <div id="IMC_res1">
+          <h1 id="activ-imc-res">{{IMC}} kg/m<sup>2</sup></h1>
+        </div>
+
+        <div class="grey-line-2p"></div>
+        <p class="bold-text">FCM (Frecuencia Cardiaca Máxima)</p>
+        <div id="IMC_res2">
+          <h1 id="activ-FMC">{{FCM}} lpm</h1>
+        </div>
+        <div class="grey-line-2p"></div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <label class="label-recipe" style="margin-bottom: 20px !important">Intensidad</label>
+          </div>
+          <div class="col-md-4 centered-text">
+            <img src="img/icono-baja.png"><br>
+            <div class="wrapper-radio-button">
+              <input type="radio" id="intensity_l" class="radio-button" ng-model="intensity" value="1" disabled />
+              <label class="label-radio-button" for="intensity_l">Baja</label>
+            </div>
+          </div>
+          <div class="col-md-4 centered-text">
+            <img src="img/icono-media.png"><br>
+            <div class="wrapper-radio-button">
+              <input type="radio" id="intensity_m" class="radio-button" ng-model="intensity" value="2" disabled />
+              <label class="label-radio-button" for="intensity_m">Media</label>
+            </div>
+          </div>
+          <div class="col-md-4 centered-text">
+            <img src="img/icono-alta.png"><br>
+            <div class="wrapper-radio-button">
+              <input type="radio" id="intensity_h" class="radio-button" ng-model="intensity" value="3" disabled />
+              <label class="label-radio-button" for="intensity_h">Media</label>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-ret-que" class="btn-return-quest" ng-click="return_form()">Regresar</button>
+        <button id="btn-gen-plan" class="btn-generate-plan" ng-click="generate_plan()">Generar plan</button>
+      </div>
+      <div class="clearfix"></div>
+      <div class="title-recipe" style="margin-top:10px"></div>
+    </div>
+    <div id="activity-plan" class="col-md-12" animate-plan>
+
+    </div>
+    <!--
+    <button id="btn-print-activity">Imprimir</button>
+    <button id="btn-share-activity" class="btn-share-calc" data-scroll-nav="0">Compartir</button>
+    -->
+  </div>
+</section>
